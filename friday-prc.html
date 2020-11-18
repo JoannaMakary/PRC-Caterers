@@ -1,0 +1,128 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Unable to type in date
+    document.getElementById("input_7_108").readOnly = true;
+
+    // Get the number of the day (1-365)
+    Date.prototype.getDOY = function () {
+      var onejan = new Date(this.getFullYear(), 0, 1);
+      return Math.ceil((this - onejan) / 86400000);
+    };
+
+    var d = new Date();
+    const dayNumber = d.getDOY();
+
+    // When date is clicked
+    var dateInput = document.querySelector("#field_7_108");
+    dateInput.addEventListener("click", trialFunction);
+
+    function trialFunction() {
+      var novemberDays = document.querySelectorAll("tbody td");
+      // Disable ALL days of November
+      novemberDays.forEach(function (element) {
+        element.classList.add("ui-datepicker-unselectable");
+        element.classList.add("ui-state-disabled");
+      });
+      // November Fridays of the Week selectors
+      var secondWeekNovemberFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(5)"
+      );
+      var thirdWeekNovemberFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(5)"
+      );
+      var fourthWeekNovemberFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(5) > td:nth-child(5)"
+      );
+
+      // if it is BEFORE second week November, unblock SECOND week
+      if (dayNumber < 311) {
+        secondWeekNovemberFriday.classList.remove("ui-datepicker-unselectable");
+        secondWeekNovemberFriday.classList.remove("ui-state-disabled");
+      }
+
+      // if it is between Friday November 6th & Thursday November 12th
+      if (dayNumber >= 311 && dayNumber <= 317) {
+        // if it is WEEK 2 & Thursday
+        if (d.getDay() == 4) {
+          // if it is BEFORE 10am, allow to order for Friday 13th.
+          if (d.getHours() < 10) {
+            secondWeekNovemberFriday.classList.remove(
+              "ui-datepicker-unselectable"
+            );
+            secondWeekNovemberFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block Friday 13th.
+          if (d.getHours() >= 10) {
+            secondWeekNovemberFriday.classList.add(
+              "ui-datepicker-unselectable"
+            );
+            secondWeekNovemberFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it is between Friday November 13th & Thursday November 19th
+      if (dayNumber >= 318 && dayNumber <= 324) {
+        thirdWeekNovemberFriday.classList.remove("ui-datepicker-unselectable");
+        thirdWeekNovemberFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 3 & Thursday
+        if (d.getDay() == 4) {
+          // if it is BEFORE 10am, allow to order for Friday 20th.
+          if (d.getHours() < 10) {
+            thirdWeekNovemberFriday.classList.remove(
+              "ui-datepicker-unselectable"
+            );
+            thirdWeekNovemberFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block Friday 20th.
+          if (d.getHours() >= 10) {
+            thirdWeekNovemberFriday.classList.add("ui-datepicker-unselectable");
+            thirdWeekNovemberFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it is between Friday November 20th & Thursday November 26th
+      if (dayNumber >= 325 && dayNumber <= 331) {
+        fourthWeekNovemberFriday.classList.remove("ui-datepicker-unselectable");
+        fourthWeekNovemberFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 4 & Thursday
+        if (d.getDay() == 4) {
+          // if it is BEFORE 10am, allow to order for Friday 27th.
+          if (d.getHours() < 10) {
+            thirdWeekNovemberFriday.classList.remove(
+              "ui-datepicker-unselectable"
+            );
+            thirdWeekNovemberFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block Friday 27th.
+          if (d.getHours() >= 10) {
+            thirdWeekNovemberFriday.classList.add("ui-datepicker-unselectable");
+            thirdWeekNovemberFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<div style="color: #5C5656;font-size: 1.2em;">
+  <div style="margin-top: 7px;">Challah Buns</div>
+  <div style="margin-top: 7px; text-decoration: underline; color: #325188; font-size: 1.1em">Appetizer</div>
+  <div style="margin-top: 7px;">Ahi Tuna Tataki</div>
+  <div style="font-style: italic;">Calamansi, Avocado, Sesame, Orange, Edamame, Cilantro & Citrus Soy Dressing</div>
+  
+  <div style="margin-top: 7px; text-decoration: underline; color: #325188; font-size: 1.1em">Entrée</div>
+  <div style="margin-top: 7px;">Mill Street Stout Braised Smoked Brisket</div>
+  <div style="font-style: italic;">Boneless Beef, Herbs, Red Onion Marmalade</div>
+
+  <div style="margin-top: 7px; text-decoration: underline; color: #325188; font-size: 1.1em">Sides</div>
+  <div style="margin-top: 7px;">Lemon & Herb House-Made Cavatelli</div>
+
+  <div style="margin-top: 7px;">Grilled Vegetables (GF)</div>
+  <div style="font-style: italic;">Carrots, Zucchini, Bell Peppers, Eggplant & Balsamic Marinade</div>
+
+  <div style="margin-top: 7px; text-decoration: underline; color: #325188; font-size: 1.1em">Dessert</div>
+  <div style="margin-top: 7px;">Banana Chiffon Cake</div>
+  <div style="font-style: italic;">Chocolate Ganache</div>
+</div>

@@ -1,0 +1,261 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Unable to type in date
+    document.getElementById("input_5_108").readOnly = true;
+
+    Date.prototype.getDOY = function () {
+      var onejan = new Date(this.getFullYear(), 0, 1);
+      return Math.ceil((this - onejan) / 86400000);
+    };
+
+    var d = new Date();
+    const dayNumber = d.getDOY();
+
+    // When date is clicked
+    var dateInput = document.querySelector("#field_5_108");
+    dateInput.addEventListener("click", trialFunction);
+
+    // Disable all of the month
+    function trialFunction() {
+      var novemberDays = document.querySelectorAll("tbody td");
+      // Disable ALL days of November
+      novemberDays.forEach(function (element) {
+        element.classList.add("ui-datepicker-unselectable");
+        element.classList.add("ui-state-disabled");
+      });
+
+      // November Days of the Week selectors
+      var secondWeekNovemberDays = document.querySelectorAll(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(n+2):nth-child(-n+4)"
+      );
+      var thirdWeekNovemberDays = document.querySelectorAll(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(n+2):nth-child(-n+4)"
+      );
+      var fourthWeekNovemberDays = document.querySelectorAll(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(5) > td:nth-child(n+2):nth-child(-n+4)"
+      );
+
+      // if it is BEFORE second week November, unblock SECOND week
+      if (dayNumber < 315) {
+        secondWeekNovemberDays.forEach(function (element) {
+          element.classList.remove("ui-datepicker-unselectable");
+          element.classList.remove("ui-state-disabled");
+        });
+      }
+
+      // if it is between Tuesday, November 10th and Thursday, November 12th
+      if (dayNumber >= 315 && dayNumber <= 317) {
+        novemberDays.forEach(function (element) {
+          element.classList.add("ui-datepicker-unselectable");
+          element.classList.add("ui-state-disabled");
+        });
+        var novemberW2Tues = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(2)"
+        );
+        var novemberW2Wed = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(3)"
+        );
+
+        var novemberW2Thurs = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(4)"
+        );
+        secondWeekNovemberDays.forEach(function (element) {
+          element.classList.remove("ui-datepicker-unselectable");
+          element.classList.remove("ui-state-disabled");
+        });
+
+        // if it is WEEK 2 & Tuesday
+        if (d.getDay() == 2) {
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW2Tues.classList.remove("ui-datepicker-unselectable");
+            novemberW2Tues.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10AM, block Tuesday.
+          if (d.getHours() >= 10) {
+            novemberW2Tues.classList.add("ui-datepicker-unselectable");
+            novemberW2Tues.classList.add("ui-state-disabled");
+          }
+        }
+
+        // if it is WEEK 2 & WEDNESDAY
+        if (d.getDay() == 3) {
+          // block day before (Tuesday)
+          novemberW2Tues.classList.add("ui-datepicker-unselectable");
+          novemberW2Tues.classList.add("ui-state-disabled");
+
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW2Wed.classList.remove("ui-datepicker-unselectable");
+            novemberW2Wed.classList.remove("ui-state-disabled");
+          }
+          // if it is after 12PM, block Wednesday.
+          if (d.getHours() >= 10) {
+            novemberW2Wed.classList.add("ui-datepicker-unselectable");
+            novemberW2Wed.classList.add("ui-state-disabled");
+          }
+        }
+
+        // if it is WEEK 2 & THURSDAY
+        if (d.getDay() == 4) {
+          // block days before (Tuesday, Wednesday)
+          novemberW2Tues.classList.add("ui-datepicker-unselectable");
+          novemberW2Tues.classList.add("ui-state-disabled");
+          novemberW2Wed.classList.add("ui-datepicker-unselectable");
+          novemberW2Wed.classList.add("ui-state-disabled");
+
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW2Thurs.classList.remove("ui-datepicker-unselectable");
+            novemberW2Thurs.classList.remove("ui-state-disabled");
+          }
+          // if it is after 12PM, block Thursday
+          if (d.getHours() >= 10) {
+            novemberW2Thurs.classList.add("ui-datepicker-unselectable");
+            novemberW2Thurs.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it is between Friday November 13 - Thursday November 19th
+      if (dayNumber >= 318 && dayNumber <= 324) {
+        thirdWeekNovemberDays.forEach(function (element) {
+          element.classList.remove("ui-datepicker-unselectable");
+          element.classList.remove("ui-state-disabled");
+        });
+
+        var novemberW3Tues = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(2)"
+        );
+        var novemberW3Wed = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(3)"
+        );
+
+        var novemberW3Thurs = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(4)"
+        );
+
+        // if it is WEEK 3 & Tuesday
+        if (d.getDay() == 2) {
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW3Tues.classList.remove("ui-datepicker-unselectable");
+            novemberW3Tues.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10AM, block Tuesday.
+          if (d.getHours() >= 10) {
+            novemberW3Tues.classList.add("ui-datepicker-unselectable");
+            novemberW3Tues.classList.add("ui-state-disabled");
+          }
+        }
+
+        // if it is WEEK 3 & WEDNESDAY
+        if (d.getDay() == 3) {
+          // block day before (Tuesday)
+          novemberW3Tues.classList.add("ui-datepicker-unselectable");
+          novemberW3Tues.classList.add("ui-state-disabled");
+
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW3Wed.classList.remove("ui-datepicker-unselectable");
+            novemberW3Wed.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10AM, block Wednesday.
+          if (d.getHours() >= 10) {
+            novemberW3Wed.classList.add("ui-datepicker-unselectable");
+            novemberW3Wed.classList.add("ui-state-disabled");
+          }
+        }
+
+        // if it is WEEK 3 & THURSDAY
+        if (d.getDay() == 4) {
+          // block days before (Tuesday, Wednesday)
+          novemberW3Tues.classList.add("ui-datepicker-unselectable");
+          novemberW3Tues.classList.add("ui-state-disabled");
+          novemberW3Wed.classList.add("ui-datepicker-unselectable");
+          novemberW3Wed.classList.add("ui-state-disabled");
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW3Thurs.classList.remove("ui-datepicker-unselectable");
+            novemberW3Thurs.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10AM, block Thursday.
+          if (d.getHours() >= 10) {
+            novemberW3Thurs.classList.add("ui-datepicker-unselectable");
+            novemberW3Thurs.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it is between Friday November 20th - Thursday November 26th
+      if (dayNumber >= 325 && dayNumber <= 331) {
+        fourthWeekNovemberDays.forEach(function (element) {
+          element.classList.remove("ui-datepicker-unselectable");
+          element.classList.remove("ui-state-disabled");
+        });
+
+        var novemberW4Tues = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(5) > td:nth-child(2)"
+        );
+        var novemberW4Wed = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(5) > td:nth-child(3)"
+        );
+        var novemberW4Thurs = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(5) > td:nth-child(4)"
+        );
+
+        // if it is WEEK 4 & Tuesday
+        if (d.getDay() == 2) {
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW4Tues.classList.remove("ui-datepicker-unselectable");
+            novemberW4Tues.classList.remove("ui-state-disabled");
+          }
+          // if it is after 12PM, block Tuesday.
+          if (d.getHours() >= 10) {
+            novemberW4Tues.classList.add("ui-datepicker-unselectable");
+            novemberW4Tues.classList.add("ui-state-disabled");
+          }
+        }
+
+        // if it is WEEK 4 & WEDNESDAY
+        if (d.getDay() == 3) {
+          // block day before (Tuesday)
+          novemberW4Tues.classList.add("ui-datepicker-unselectable");
+          novemberW4Tues.classList.add("ui-state-disabled");
+
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW4Wed.classList.remove("ui-datepicker-unselectable");
+            novemberW4Wed.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10AM, block Wednesday.
+          if (d.getHours() >= 10) {
+            novemberW4Wed.classList.add("ui-datepicker-unselectable");
+            novemberW4Wed.classList.add("ui-state-disabled");
+          }
+        }
+
+        // if it is WEEK 4 & THURSDAY
+        if (d.getDay() == 4) {
+          // block days before (Tuesday, Wednesday)
+          novemberW4Tues.classList.add("ui-datepicker-unselectable");
+          novemberW4Tues.classList.add("ui-state-disabled");
+          novemberW4Wed.classList.add("ui-datepicker-unselectable");
+          novemberW4Wed.classList.add("ui-state-disabled");
+
+          // if it is BEFORE 10AM, allow to order for today.
+          if (d.getHours() < 10) {
+            novemberW4Thurs.classList.remove("ui-datepicker-unselectable");
+            novemberW4Thurs.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10AM, block Thursday
+          if (d.getHours() >= 10) {
+            novemberW4Thurs.classList.add("ui-datepicker-unselectable");
+            novemberW4Thurs.classList.add("ui-state-disabled");
+          }
+        }
+      }
+    }
+  });
+</script>
