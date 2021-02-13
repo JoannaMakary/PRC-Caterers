@@ -1,89 +1,114 @@
-/* 
-* Current Menu (field_7_83)
-    field_7_3
-* Upcoming Menus (field_7_73)
-    field_7_101, field_7_102, field_7_103
-* Enhancements (field_7_11)
-* Dips (field_7_147)
-    field_7_148, field_7_149, field_7_150, field_7_151, field_7_152
-* Soups (field_7_96)
-    field_7_12, field_7_14, field_7_21, field_7_22, field_7_23, field_7_69, 
-* Salads (field_7_85)
-    field_7_86, field_7_87, field_7_88, field_7_124, field_7_125
-* Entrees (field_7_126)
-    field_7_127, field_7_128, field_7_129, field_7_130
-* By the Piece (field_7_131)
-    field_7_143, field_7_142, field_7_138, field_7_141, field_7_153, field_7_132, field_7_133, field_7_134, field_7_135
-* By the Pound (field_7_113)
-    field_7_139, field_7_97, field_7_140
-* Desserts (field_7_92)
-    field_7_144, field_7_145, field_7_146, field_7_110
-* Order for Date (field_7_108)
-*/
-
 /* HIDE UPCOMING MENUS */
-#field_7_154,
 #field_7_101,
+#field_7_102,
 #field_7_103 {
   display: none !important;
 }
 
-/* WEEKLY CHANGES */
 /* ROASTED BABY EGGPLANTS */
 #field_7_152 {
   display: none !important;
 }
+
 /* HIDE UNTIL NEEDED - ENTREES */
 #field_7_127,
 #field_7_128,
 #field_7_129,
-#field_7_130 {
+#field_7_130,
+#field_7_156,
+#field_7_154,
+#field_7_155 {
   display: none !important;
 }
 /* HIDE UNTIL NEEDED - DESSERTS */
 #field_7_144,
 #field_7_145,
 #field_7_146,
-#field_7_110 {
+#field_7_110,
+#field_7_157,
+#field_7_158 {
   display: none !important;
 }
 
-/* WEEK 1 - ENTREES TO UNHIDE */
-/*  #field_7_127, #field_7_128, #field_7_130 {
-display: inline-block !important;
-} */
-/* WEEK 1 - DESSERTS TO UNHIDE */
-/*  #field_7_144  {
-display: inline-block !important;
-} */
-
-/* WEEK 2 - ENTREES TO UNHIDE */
-#field_7_129 {
-  display: inline-block !important;
-}
-/* WEEK 2 - DESSERTS TO UNHIDE */
-#field_7_145,
-#field_7_146 {
-  display: inline-block !important;
+/* REMOVE SALADS */
+#field_7_85,
+#field_7_86,
+#field_7_87,
+#field_7_88,
+#field_7_124,
+#field_7_125,
+#field_7_139,
+#field_7_140 {
+  display: none !important;
 }
 
-/* WEEK 3 - ENTREES TO UNHIDE */
-/* #field_7_128 {
-display: inline-block !important;
-} */
-/* WEEK 3 - DESSERTS TO UNHIDE */
-/* #field_7_146  {
-display: inline-block !important;
+/* WEEK 1 - UPCOMING MENU TO UNHIDE = WEEK 2 */
+
+#field_7_101 {
+  display: inline-block !important;
+}
+
+/* WEEK 1 - ENTREES TO UNHIDE = EDAMAME CHICKPEA CAKE, HONEY TAMARI SALMON, APPLE CIDER CHICKEN  */
+
+#field_7_127,
+#field_7_155 {
+  display: inline-block !important;
+}
+
+/* WEEK 1 - DESSERTS TO UNHIDE = BANANA CHIFFON CAKE */
+
+#field_7_144 {
+  display: inline-block !important;
+}
+
+/* WEEK 2 - UPCOMING MENU TO UNHIDE = WEEK 3 */
+
+/* #field_7_102 {
+  display: inline-block !important;
 } */
 
-/* WEEK 4 - ENTREES TO UNHIDE */
-/* ??? {
-display: inline-block !important;
+/* WEEK 2 - ENTREES TO UNHIDE = CAULIFLOWER STEAK, BRISKET */
+
+/* #field_7_129, #field_7_155 {
+  display: inline-block !important;
 } */
-/* WEEK 4 - DESSERTS TO UNHIDE */
-/* #field_7_110  {
-display: inline-block !important;
+
+/* WEEK 2 - DESSERTS TO UNHIDE = APPLE PECAN CRUMBLE */
+
+/* #field_7_145 {
+  display: inline-block !important;
 } */
+
+/* WEEK 3 - UPCOMING MENU TO UNHIDE = WEEK 4*/
+/* #field_7_103 {
+  display: inline-block !important;
+} */
+/* WEEK 3 - ENTREES TO UNHIDE = CAULIFLOWER STEAK, BEEF BRISKET */
+/* #field_7_129, #field_7_155
+  display: inline-block !important;
+} */
+/* WEEK 3 - DESSERTS TO UNHIDE = DATE  & WALNUT CAKE */
+/* #field_7_157 {
+  display: inline-block !important;
+} */
+
+/* WEEK 4 - UPCOMING MENU TO UNHIDE - week 1 */
+/*#field_7_154 {
+  display: inline-block !important;
+}
+*/
+/* WEEK 4 - ENTREES TO UNHIDE = Edamame Chickpea Cake, Honey Tamari Salmon */
+/*
+#field_7_127, #field_7_130 {
+  display: inline-block !important;
+}
+*/
+/* WEEK 4 - DESSERTS TO UNHIDE - Upside Down Pineapple Cake */
+/*
+#field_7_158 {
+  display: inline-block !important;
+}
+*/
 
 #gform_totals_7 {
   display: none !important;
@@ -100,7 +125,8 @@ display: inline-block !important;
 }
 
 #field_7_3 {
-  padding-bottom: 45px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 55px !important;
 }
 
 p.price,
@@ -134,16 +160,11 @@ span.ginput_product_price_label {
 @font-face {
   font-family: "Circular Std Book";
   src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot");
-  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book")
-      format("svg");
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg");
 }
 
 #gform_fields_7 {
@@ -188,23 +209,14 @@ span.ginput_product_price_label {
   color: black !important;
 }
 
-#field_7_3 {
-  margin-bottom: 0px !important;
-}
-
 #field_7_3 > label {
   font-size: 1.1em !important;
 }
 
 #input_7_3,
-#field_7_3
-  > div.ginput_container.ginput_container_singleproduct
-  > span.quantity-sign.minus-quantity,
-#field_7_3
-  > div.ginput_container.ginput_container_singleproduct
-  > span.quantity-sign.plus-quantity,
+#field_7_3 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.minus-quantity,
+#field_7_3 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.plus-quantity,
 #ginput_quantity_7_3 {
-  margin-top: -50px !important;
   z-index: 200 !important;
   line-height: 25px !important;
 }
@@ -352,10 +364,6 @@ label.gfield_label {
     width: 100% !important;
   }
 
-  #field_7_3 {
-    height: 570px !important;
-  }
-
   #field_7_122,
   #field_7_123 {
     height: 170px !important;
@@ -374,7 +382,12 @@ label.gfield_label {
   #field_7_149,
   #field_7_150,
   #field_7_151,
-  #field_7_152 {
+  #field_7_152,
+  #field_7_162,
+  #field_7_163,
+  #field_7_164,
+  #field_7_165,
+  #field_7_166 {
     height: 160px !important;
   }
 
@@ -388,7 +401,9 @@ label.gfield_label {
   #field_7_134,
   #field_7_135,
   #field_7_136,
-  #field_7_137 {
+  #field_7_137,
+  #field_7_160,
+  #field_7_168 {
     height: 160px !important;
   }
 
@@ -418,7 +433,9 @@ label.gfield_label {
   #field_7_144,
   #field_7_145,
   #field_7_146,
-  #field_7_110 {
+  #field_7_110,
+  #field_7_157,
+  #field_7_158 {
     height: 140px !important;
   }
 }
@@ -431,19 +448,6 @@ label.gfield_label {
   .gf_right_third {
     padding: 10px !important;
     width: 100% !important;
-  }
-
-  #field_7_3 {
-    height: 450px !important;
-  }
-
-  #field_7_101,
-  #field_7_102 {
-    height: 470px !important;
-  }
-
-  #field_7_103 {
-    height: 420px !important;
   }
 
   #field_7_101,
@@ -480,7 +484,12 @@ label.gfield_label {
   #field_7_149,
   #field_7_150,
   #field_7_151,
-  #field_7_152 {
+  #field_7_152,
+  #field_7_162,
+  #field_7_163,
+  #field_7_164,
+  #field_7_165,
+  #field_7_166 {
     width: 49% !important;
     height: 130px !important;
   }
@@ -505,7 +514,9 @@ label.gfield_label {
   #field_7_134,
   #field_7_135,
   #field_7_136,
-  #field_7_137 {
+  #field_7_137,
+  #field_7_160,
+  #field_7_168 {
     width: 49% !important;
     height: 130px !important;
   }
@@ -520,7 +531,9 @@ label.gfield_label {
   #field_7_144,
   #field_7_145,
   #field_7_146,
-  #field_7_110 {
+  #field_7_110,
+  #field_7_157,
+  #field_7_158 {
     width: 49% !important;
     height: 140px !important;
   }
@@ -539,21 +552,16 @@ label.gfield_label {
     width: 80% !important;
   }
 
-  #field_7_3 {
-    height: 450px !important;
-  }
-
-  #field_7_101,
-  #field_7_102,
-  #field_7_103 {
-    height: 400px !important;
-  }
-
   #field_7_148,
   #field_7_149,
   #field_7_150,
   #field_7_151,
-  #field_7_152 {
+  #field_7_152,
+  #field_7_162,
+  #field_7_163,
+  #field_7_164,
+  #field_7_165,
+  #field_7_166 {
     height: 150px !important;
   }
 
@@ -576,7 +584,9 @@ label.gfield_label {
   #field_7_134,
   #field_7_135,
   #field_7_136,
-  #field_7_137 {
+  #field_7_137,
+  #field_7_160,
+  #field_7_168 {
     width: 32% !important;
   }
 
@@ -586,7 +596,12 @@ label.gfield_label {
   #field_7_149,
   #field_7_150,
   #field_7_151,
-  #field_7_152 {
+  #field_7_152,
+  #field_7_162,
+  #field_7_163,
+  #field_7_164,
+  #field_7_165,
+  #field_7_166 {
     width: 32% !important;
   }
 
@@ -599,7 +614,9 @@ label.gfield_label {
   #field_7_144,
   #field_7_145,
   #field_7_146,
-  #field_7_110 {
+  #field_7_110,
+  #field_7_157,
+  #field_7_158 {
     width: 32% !important;
   }
 
@@ -646,21 +663,16 @@ label.gfield_label {
     width: 60% !important;
   }
 
-  #field_7_3 {
-    height: 470px !important;
-  }
-
-  #field_7_101,
-  #field_7_102,
-  #field_7_103 {
-    height: 370px !important;
-  }
-
   #field_7_148,
   #field_7_149,
   #field_7_150,
   #field_7_151,
-  #field_7_152 {
+  #field_7_152,
+  #field_7_162,
+  #field_7_163,
+  #field_7_164,
+  #field_7_165,
+  #field_7_166 {
     height: 140px !important;
   }
 
@@ -697,7 +709,9 @@ label.gfield_label {
   #field_7_134,
   #field_7_135,
   #field_7_136,
-  #field_7_137 {
+  #field_7_137,
+  #field_7_160,
+  #field_7_168 {
     height: 120px !important;
   }
 
@@ -716,27 +730,24 @@ label.gfield_label {
   #field_7_144,
   #field_7_145,
   #field_7_146,
-  #field_7_110 {
+  #field_7_110,
+  #field_7_157,
+  #field_7_158 {
     height: 130px !important;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  #field_7_101,
-  #field_7_102,
-  #field_7_103 {
-    height: 335px !important;
-  }
-
-  #field_7_3 {
-    height: 450px !important;
-  }
-
   #field_7_148,
   #field_7_149,
   #field_7_150,
   #field_7_151,
-  #field_7_152 {
+  #field_7_152,
+  #field_7_162,
+  #field_7_163,
+  #field_7_164,
+  #field_7_165,
+  #field_7_166 {
     height: 120px !important;
   }
 
@@ -765,7 +776,9 @@ label.gfield_label {
   #field_7_134,
   #field_7_135,
   #field_7_136,
-  #field_7_137 {
+  #field_7_137,
+  #field_7_160,
+    #field_7_168 {
     height: 120px !important;
   }
 
@@ -783,7 +796,9 @@ label.gfield_label {
   #field_7_144,
   #field_7_145,
   #field_7_146,
-  #field_7_110 {
+  #field_7_110,
+  #field_7_157,
+  #field_7_158 {
     height: 130px !important;
   }
 }
@@ -797,23 +812,10 @@ label.gfield_label {
   display: none !important;
 }
 
-#ui-datepicker-div
-  > div
-  > div
-  > select.ui-datepicker-year
-  > option:not(:nth-child(101)) {
+#ui-datepicker-div > div > div > select.ui-datepicker-year > option:not(:nth-child(101)) {
   display: none !important;
 }
 
-#ui-datepicker-div
-  > div
-  > div
-  > select.ui-datepicker-month
-  > option:nth-child(-n + 10),
-#ui-datepicker-div
-  > div
-  > div
-  > select.ui-datepicker-month
-  > option:last-child {
+#ui-datepicker-div > div > div > select.ui-datepicker-month > option:nth-child(-n + 11) {
   display: none !important;
 }

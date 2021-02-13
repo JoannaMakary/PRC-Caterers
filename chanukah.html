@@ -1,0 +1,109 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Unable to type in date
+    document.getElementById("input_8_108").readOnly = true;
+
+    // Get # day of the year
+    Date.prototype.getDOY = function () {
+      var onejan = new Date(this.getFullYear(), 0, 1);
+      return Math.ceil((this - onejan) / 86400000);
+    };
+
+    var d = new Date();
+    const dayNumber = d.getDOY();
+
+    // When date is clicked LEFT OR RIGHT CLICK
+    var dateInput = document.querySelector("#field_8_108");
+    dateInput.addEventListener("mouseup", trialFunction);
+
+    // Disable all of the month
+    function trialFunction() {
+      var decemberDays = document.querySelectorAll("tbody td");
+      // Disable ALL days of December
+      decemberDays.forEach(function (element) {
+        element.classList.add("ui-datepicker-unselectable");
+        element.classList.add("ui-state-disabled");
+      });
+
+      // December Days of the Week selectors
+      var firstWeekDecemberDays = document.querySelectorAll(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(2) > td:nth-child(7)"
+      );
+      var secondWeekDecemberDays = document.querySelectorAll(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(n+1):nth-child(-n+4)"
+      );
+
+      // if it is between Sunday and Thursday
+      if (dayNumber >= 344 && dayNumber <= 352) {
+        decemberDays.forEach(function (element) {
+          element.classList.add("ui-datepicker-unselectable");
+          element.classList.add("ui-state-disabled");
+        });
+        var decemberW1Sun = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(2) > td:nth-child(7)"
+        );
+        var decemberW1Mon = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(1)"
+        );
+
+        var decemberW1Tues = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(2)"
+        );
+
+        var decemberW1Wed = document.querySelector(
+          "ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(3)"
+        );
+
+        var decemberW1Thurs = document.querySelector(
+          "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(4)"
+        );
+
+        firstWeekDecemberDays.forEach(function (element) {
+          element.classList.remove("ui-datepicker-unselectable");
+          element.classList.remove("ui-state-disabled");
+        });
+
+        secondWeekDecemberDays.forEach(function (element) {
+          element.classList.remove("ui-datepicker-unselectable");
+          element.classList.remove("ui-state-disabled");
+        });
+
+        // if it is SUNDAY
+        if (d.getDay() == 7) {
+          decemberW1Sun.classList.add("ui-datepicker-unselectable");
+          decemberW1Sun.classList.add("ui-state-disabled");
+        }
+
+        // if it is MONDAY
+        if (d.getDay() == 1) {
+          decemberW1Mon.classList.add("ui-datepicker-unselectable");
+          decemberW1Mon.classList.add("ui-state-disabled");
+        }
+
+        // if it is TUESDAY
+        if (d.getDay() == 2) {
+          decemberW1Tues.classList.add("ui-datepicker-unselectable");
+          decemberW1Tues.classList.add("ui-state-disabled");
+        }
+
+        if (dayNumber >= 351) {
+          // if it is WEDNESDAY
+          if (d.getDay() == 3) {
+            decemberW1Wed.classList.add("ui-datepicker-unselectable");
+            decemberW1Wed.classList.add("ui-state-disabled");
+          }
+
+          // if it is THURSDAY
+          if (d.getDay() == 4) {
+            decemberW1Thurs.classList.add("ui-datepicker-unselectable");
+            decemberW1Thurs.classList.add("ui-state-disabled");
+          }
+        }
+      }
+    }
+
+    // Change error message so user understands right away
+    var errorMessage = document.querySelector("div.validation_error");
+    errorMessage.innerText = "There was an error with your order - please select a Date";
+  });
+</script>

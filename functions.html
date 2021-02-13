@@ -1,0 +1,139 @@
+<script>
+  jQuery(document).ready(function () {
+    document.getElementById("ginput_quantity_11_96").setAttribute("readonly", "true");
+    document.getElementById("ginput_quantity_11_97").setAttribute("readonly", "true");
+    document.getElementById("ginput_quantity_11_98").setAttribute("readonly", "true");
+    document.getElementById("ginput_quantity_11_99").setAttribute("readonly", "true");
+
+    jQuery.each(jQuery("input.ginput_quantity"), function (index, input) {
+      input.value = 0;
+    });
+
+    jQuery("input.ginput_quantity").before(
+      '<span class="quantity-sign minus-quantity">&#8722;</span>'
+    );
+
+    jQuery("input.ginput_quantity").after('<span class="quantity-sign plus-quantity">&#43;</span>');
+
+    function setIncreaseQuantityAction() {
+      jQuery.each(jQuery(".plus-quantity"), function (index, el) {
+        el.addEventListener("click", increaseQuantity);
+      });
+    }
+
+    function setReduceQuantityAction() {
+      jQuery.each(jQuery(".minus-quantity"), function (index, el) {
+        el.addEventListener("click", ReduceQuantity);
+      });
+    }
+
+    function increaseQuantity() {
+      let targetInput = this.previousElementSibling;
+
+      targetInput.value = +targetInput.value + 1;
+    }
+
+    function ReduceQuantity() {
+      let targetInput = this.nextElementSibling;
+
+      if (targetInput.value > 0) {
+        targetInput.value = +targetInput.value - 1;
+      }
+    }
+
+    function setIncreaseQuantitySeder() {
+      jQuery.each(
+        jQuery(
+          "#field_11_96 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.plus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", increaseSederQuantity);
+        }
+      );
+      jQuery.each(
+        jQuery(
+          "#field_11_97 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.plus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", increaseSederQuantity);
+        }
+      );
+      jQuery.each(
+        jQuery(
+          "#field_11_98 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.plus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", increaseSederQuantity);
+        }
+      );
+      jQuery.each(
+        jQuery(
+          "#field_11_99 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.plus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", increaseSederQuantity);
+        }
+      );
+    }
+
+    function setDecreaseQuantitySeder() {
+      jQuery.each(
+        jQuery(
+          "#field_11_96 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.minus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", decreaseSederQuantity);
+        }
+      );
+      jQuery.each(
+        jQuery(
+          "#field_11_97 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.minus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", decreaseSederQuantity);
+        }
+      );
+      jQuery.each(
+        jQuery(
+          "#field_11_98 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.minus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", decreaseSederQuantity);
+        }
+      );
+      jQuery.each(
+        jQuery(
+          "#field_11_99 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.minus-quantity"
+        ),
+        function (index, el) {
+          el.addEventListener("click", decreaseSederQuantity);
+        }
+      );
+    }
+
+    function increaseSederQuantity() {
+      let targetInput = this.previousElementSibling;
+
+      if (targetInput.value < 5) {
+        targetInput.value = 5;
+      } else {
+        increaseQuantity();
+      }
+    }
+
+    function decreaseSederQuantity() {
+      let targetInput = this.nextElementSibling;
+
+      if (targetInput.value <= 5) {
+        targetInput.value = 0;
+      } else {
+        decreaseQuantity();
+      }
+    }
+
+    setTimeout(setIncreaseQuantityAction, 1000);
+    setTimeout(setReduceQuantityAction, 1000);
+    setTimeout(setIncreaseQuantitySeder, 1000);
+    setTimeout(setDecreaseQuantitySeder, 1000);
+  });
+</script>
