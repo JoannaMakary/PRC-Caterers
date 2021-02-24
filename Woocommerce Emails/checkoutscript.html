@@ -1,0 +1,144 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // if they order friday meal
+    var mealType = document.querySelector("#order_info > table > tbody > tr > td.product-name")
+      .textContent;
+
+    if (mealType.includes("Chanukah")) {
+      // remove 2-4pm pick-up & delivery
+      var pickupDropdown = document.querySelector("#billing_pickup_time_slot_field > span");
+
+      pickupDropdown.addEventListener("mousedown", (e) => {
+        var familyPickup = document.querySelector("li.select2-results__option:nth-child(1)");
+        var familyPickup2 = document.querySelector("li.select2-results__option:nth-child(2)");
+        familyPickup.style.display = "none";
+        familyPickup2.style.display = "none";
+      });
+
+      var deliveryDropdown = document.querySelector("#billing_delivery_time_slot_field > span");
+
+      deliveryDropdown.addEventListener("mousedown", (e) => {
+        var familyDelivery = document.querySelector("li.select2-results__option:nth-child(2)");
+        familyDelivery.style.display = "none";
+      });
+    }
+
+    if (mealType.includes("Friday")) {
+      // remove 2-4pm pick-up & delivery
+      var pickupDropdown = document.querySelector("#billing_pickup_time_slot_field > span");
+
+      pickupDropdown.addEventListener("mousedown", (e) => {
+        var familyPickup = document.querySelector("li.select2-results__option:nth-child(1)");
+        var familyPickup2 = document.querySelector("li.select2-results__option:nth-child(2)");
+        familyPickup.style.display = "none";
+        familyPickup2.style.display = "none";
+      });
+
+      var deliveryDropdown = document.querySelector("#billing_delivery_time_slot_field > span");
+
+      deliveryDropdown.addEventListener("mousedown", (e) => {
+        var familyDelivery = document.querySelector("li.select2-results__option:nth-child(1)");
+        familyDelivery.style.display = "none";
+      });
+    }
+
+    // if they order family meal
+    if (mealType.includes("Family")) {
+      var pickupDropdown2 = document.querySelector("#billing_pickup_time_slot_field > span");
+
+      pickupDropdown2.addEventListener("mousedown", (e) => {
+        var familyPickup = document.querySelector("li.select2-results__option:nth-child(3)");
+        var familyPickup2 = document.querySelector("li.select2-results__option:nth-child(4)");
+        familyPickup.style.display = "none";
+        familyPickup2.style.display = "none";
+      });
+
+      var deliveryDropdown2 = document.querySelector("#billing_delivery_time_slot_field > span");
+
+      deliveryDropdown2.addEventListener("mousedown", (e) => {
+        var familyDelivery = document.querySelector("li.select2-results__option:nth-child(2)");
+        familyDelivery.style.display = "none";
+      });
+    }
+
+    var pickupSelect = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(2) > input[type=radio]"
+    );
+    var deliverySelect = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(3) > input[type=radio]"
+    );
+
+    var pickupButton = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(2) > input[type=radio]"
+    );
+    var deliveryButton = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(3) > input[type=radio]"
+    );
+
+    var pickupEles = document.querySelectorAll("#billing_pickup_time_slot_field");
+
+    var deliveryEles = document.querySelectorAll("#billing_delivery_time_slot_field");
+
+    var pickupField = document.querySelector("#del_notice2_field");
+
+    var deliveryField = document.querySelector("#del_notice2_field");
+
+    deliveryEles.forEach(function (element) {
+      element.style.display = "none";
+      element.style.display = "none";
+    });
+
+    function pickupFunction() {
+      if (pickupSelect.checked == true) {
+        console.log("pickup");
+        pickupEles.forEach(function (element) {
+          element.style.display = "block";
+          element.style.display = "block";
+        });
+        deliveryEles.forEach(function (element) {
+          element.style.display = "none";
+          element.style.display = "none";
+        });
+        deliveryField.style.display = "none";
+        pickupField.style.display = "block";
+      }
+    }
+
+    function deliveryFunction() {
+      if (deliverySelect.checked == true) {
+        console.log("delivery");
+        pickupEles.forEach(function (element) {
+          element.style.display = "none";
+          element.style.display = "none";
+        });
+        deliveryEles.forEach(function (element) {
+          element.style.display = "block";
+          element.style.display = "block";
+        });
+        pickupField.style.display = "none";
+        deliveryField.style.display = "block";
+      }
+    }
+
+    pickupButton.addEventListener("click", pickupFunction);
+    deliveryButton.addEventListener("click", deliveryFunction);
+  });
+
+  var orderForm = document.querySelector("#checkout-wrapper > form");
+
+  // looks for change in order form
+  orderForm.addEventListener("DOMSubtreeModified", function () {
+    var test = document.querySelector(
+      "#order_info > table > tbody > tr > td.product-total > span > bdi"
+    );
+    var nextButton = document.querySelectorAll("input.button.alt.yith-wcms-button.next");
+
+    var ordersubTotal = parseFloat(test.innerText.substring(1));
+    if (ordersubTotal < 1) {
+      nextButton.forEach(function (element) {
+        element.setAttribute("id", "error-checkout");
+        element.value = "Please make sure your order is correct. Your subtotal is $0";
+      });
+    }
+  });
+</script>
