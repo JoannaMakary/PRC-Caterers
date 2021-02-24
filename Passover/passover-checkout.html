@@ -1,0 +1,58 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    var customerDate = document.querySelector(
+      "#order_info > table > tbody > tr > td.product-name > dl > dd.variation-Pick-upDeliveryDate"
+    );
+
+    var thursdayDropdown = document.querySelector("#billing_pickup_time_slot_thursday_field");
+    var fridayDropdown = document.querySelector("#billing_pickup_time_slot_friday_field");
+
+    // if Thursday selected
+    if (customerDate.textContent == "03/25/2021") {
+      // remove Friday dropdown
+      fridayDropdown.style.display = "none";
+      // if Friday selected
+    } else if (customerDate.textContent == "03/26/2021") {
+      // remove Thursday dropdown
+      thursdayDropdown.style.display = "none";
+    }
+
+    var deliverySelect = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(3) > input[type=radio]"
+    );
+    var deliveryLabel = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(3)"
+    );
+
+    deliverySelect.addEventListener("mouseup", filterDelivery);
+    deliveryLabel.addEventListener("mouseup", filterDelivery);
+
+    function filterDelivery() {
+      // if delivery is selected, remove both dropdowns
+      thursdayDropdown.style.display = "none";
+      fridayDropdown.style.display = "none";
+    }
+
+    var pickupSelect = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(2) > input[type=radio]"
+    );
+    var pickupLabel = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(2)"
+    );
+
+    pickupSelect.addEventListener("mouseup", filterPickup);
+    pickupLabel.addEventListener("mouseup", filterPickup);
+
+    function filterPickup() {
+      // if pickup is selected, add both dropdowns
+      // if Thursday selected
+      if (customerDate.textContent == "03/25/2021") {
+        thursdayDropdown.style.display = "none";
+        // if Friday selected
+      } else if (customerDate.textContent == "03/26/2021") {
+        // remove Thursday dropdown
+        fridayDropdown.style.display = "block";
+      }
+    }
+  });
+</script>
