@@ -1,0 +1,2223 @@
+body
+  > main
+  > div
+  > div.elementor.elementor-10472
+  > div
+  > div
+  > section.elementor-section.elementor-top-section.elementor-element.elementor-element-62df841.framed-section.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default
+  > div
+  > div
+  > div
+  > div
+  > div
+  > section {
+  border-bottom: 1px solid white !important;
+  background-color: #19315c !important;
+}
+
+.tabs-top {
+  padding: 15px;
+  font-weight: 600 !important;
+}
+
+.tabs-top:hover {
+  border-bottom: 1px solid white;
+}
+
+.woocommerce span.onsale {
+  display: none !important;
+  /*
+  font-family: "Circular Std Book", "Open Sans";
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 0rem 2rem;
+  border-radius: 0.25rem;
+  font-size: 1.1em !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  */
+}
+
+#gform_totals_13 {
+  display: none !important;
+}
+
+/* All products take up full container */
+.woocommerce div.product div.summary {
+  width: 100%;
+}
+
+/* Text align the whole container */
+#gform_fields_13 {
+  text-align: center;
+}
+
+#field_13_1 {
+  margin-bottom: 0px !important;
+}
+
+p.price,
+#gform_totals_13 {
+  display: none;
+}
+
+/* Remove Related Products Menu */
+.related.products {
+  display: none !important;
+}
+
+/* Remove Product Images */
+.woocommerce div.product div.images.woocommerce-product-gallery,
+div.product_meta {
+  display: none !important;
+}
+
+/* Remove product price label */
+span.ginput_product_price_label {
+  display: none !important;
+}
+
+/* Remove input quantity label */
+.ginput_quantity_label {
+  display: none !important;
+  margin-left: auto !important;
+}
+
+/* CIRCULAR FONT */
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot");
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book")
+      format("svg");
+}
+
+#gform_fields_13 {
+  font-family: "Circular Std Book", "Open Sans";
+  letter-spacing: 0.3px;
+  font-size: 1.1em !important;
+}
+
+/* Error messages */
+#ordering-form
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div.elementor-element.elementor-element-8402693.elementor-widget.elementor-widget-wc-elements
+  > div
+  > div
+  > div
+  > div.woocommerce-notices-wrapper
+  > ul
+  > li
+  > a {
+  color: white !important;
+  background-color: #0a2657 !important;
+}
+
+/* Error messages */
+#ordering-form
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div.elementor-element.elementor-element-8402693.elementor-widget.elementor-widget-wc-elements
+  > div
+  > div
+  > div
+  > div.woocommerce-notices-wrapper
+  > ul
+  > li {
+  color: black !important;
+}
+
+#field_13_1 > label {
+  font-size: 1.1em !important;
+}
+
+#input_13_1,
+#field_13_1
+  > div.ginput_container.ginput_container_singleproduct
+  > span.quantity-sign.minus-quantity,
+#field_13_1
+  > div.ginput_container.ginput_container_singleproduct
+  > span.quantity-sign.plus-quantity,
+#ginput_quantity_13_1 {
+  z-index: 200 !important;
+  line-height: 25px !important;
+}
+
+/* All products take up full container */
+.woocommerce div.product div.summary {
+  width: 100%;
+}
+
+/* Text align the whole container */
+#gform_fields_13 {
+  text-align: center;
+}
+
+/* Remove Related Products Menu */
+.related.products {
+  display: none !important;
+}
+
+/* Remove Product Images */
+.woocommerce div.product div.images.woocommerce-product-gallery,
+div.product_meta {
+  display: none !important;
+}
+
+/* Remove product price label */
+span.ginput_product_price_label {
+  display: none !important;
+}
+
+/* Remove input quantity label */
+.ginput_quantity_label {
+  display: none !important;
+  margin-left: auto !important;
+}
+
+/* Each product to have border etc */
+.gf_left_half,
+.gf_right_half,
+.gf_left_third,
+.gf_middle_third,
+.gf_right_third {
+  border: 1px solid #d1cfcf;
+  padding: 10px 50px !important;
+  position: relative;
+}
+
+/* Remove padding */
+.gform_wrapper .description,
+.gform_wrapper .gfield_description,
+.gform_wrapper .gsection_description {
+  padding: 0 0 0 0 !important;
+}
+
+/* Labels for each Product */
+label.gfield_label {
+  order: 0;
+  color: #0a2657;
+  font-weight: 700;
+}
+
+/* Pricing container */
+.gfield_price .ginput_container {
+  order: 2 !important;
+  margin-top: 10px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+/* More pricing container per product */
+.ginput_container_singleproduct {
+  bottom: 0 !important;
+  margin-bottom: 10px !important;
+  width: 100% !important;
+  right: 10px !important;
+  padding: 0 10px !important;
+  position: absolute;
+}
+
+/* Product Price */
+.ginput_product_price {
+  font-weight: 600;
+  color: #0a2657 !important;
+  vertical-align: middle !important;
+  margin-top: 7px;
+  margin-right: 10px;
+  display: inline-block !important;
+}
+
+.ginput_quantity {
+  text-align: center !important;
+  padding: 5px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #0a2657 !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  display: inline-block !important;
+  max-width: 40px !important;
+}
+
+.quantity-sign {
+  color: #0a2657 !important;
+  margin: 0 !important;
+  font-size: 30px !important;
+  outline: none;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.minus-quantity {
+  margin-right: 5px !important;
+}
+
+.gform_wrapper
+  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+  padding: 0px;
+}
+
+#gform_submit_button_13 {
+  border: 1px solid #d1cfcf !important;
+  background: transparent !important;
+  color: #515151 !important;
+  text-transform: uppercase !important;
+  padding: 15px 30px !important;
+  transition: all 0.3s ease-in-out !important;
+  border-radius: 0 !important;
+}
+
+@media only screen and (min-width: 300px) {
+  #field_13_149,
+  #field_13_150,
+  #field_13_151,
+  #field_13_152,
+  #field_13_153,
+  #field_13_154,
+  #field_13_155,
+  #field_13_156,
+  #field_13_157,
+  #field_13_158,
+  #field_13_159,
+  #field_13_160,
+  #field_13_161,
+  #field_13_162,
+  #field_13_163 {
+    display: none;
+  }
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    padding: 10px !important;
+    width: 100% !important;
+  }
+
+  /* ALL */
+  #field_13_2,
+  #field_13_3,
+  #field_13_4,
+  #field_13_5,
+  #field_13_6,
+  #field_13_7,
+  #field_13_9,
+  #field_13_10,
+  #field_13_12,
+  #field_13_13,
+  #field_13_15,
+  #field_13_16,
+  #field_13_17,
+  #field_13_18,
+  #field_13_20,
+  #field_13_21,
+  #field_13_22,
+  #field_13_23,
+  #field_13_24,
+  #field_13_25,
+  #field_13_27,
+  #field_13_28,
+  #field_13_29,
+  #field_13_30,
+  #field_13_31,
+  #field_13_32,
+  #field_13_34,
+  #field_13_35,
+  #field_13_36,
+  #field_13_37,
+  #field_13_39,
+  #field_13_40,
+  #field_13_41,
+  #field_13_42,
+  #field_13_43,
+  #field_13_45,
+  #field_13_46,
+  #field_13_47,
+  #field_13_49,
+  #field_13_50,
+  #field_13_51,
+  #field_13_53,
+  #field_13_54,
+  #field_13_55,
+  #field_13_57,
+  #field_13_58,
+  #field_13_60,
+  #field_13_61,
+  #field_13_62,
+  #field_13_63,
+  #field_13_64,
+  #field_13_65,
+  #field_13_66,
+  #field_13_67,
+  #field_13_68,
+  #field_13_69,
+  #field_13_70,
+  #field_13_71,
+  #field_13_72,
+  #field_13_73,
+  #field_13_77,
+  #field_13_78,
+  #field_13_79,
+  #field_13_80,
+  #field_13_81,
+  #field_13_86,
+  #field_13_87,
+  #field_13_88,
+  #field_13_89,
+  #field_13_90,
+  #field_13_91,
+  #field_13_92,
+  #field_13_93,
+  #field_13_94,
+  #field_13_96,
+  #field_13_97,
+  #field_13_98,
+  #field_13_99,
+  #field_13_101,
+  #field_13_102,
+  #field_13_103,
+  #field_13_104,
+  #field_13_105,
+  #field_13_106,
+  #field_13_107,
+  #field_13_108,
+  #field_13_110,
+  #field_13_111,
+  #field_13_113,
+  #field_13_114,
+  #field_13_115,
+  #field_13_116,
+  #field_13_118,
+  #field_13_119,
+  #field_13_120,
+  #field_13_121,
+  #field_13_122,
+  #field_13_124,
+  #field_13_126,
+  #field_13_127,
+  #field_13_131,
+  #field_13_132,
+  #field_13_143,
+  #field_13_144 {
+    height: auto;
+    padding-bottom: 55px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #gform_submit_button_13 {
+    left: 40%;
+  }
+
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    padding: 10px !important;
+    width: 100% !important;
+  }
+
+  .gf_left_half {
+    margin-right: 8px !important;
+  }
+
+  .ginput_container_singleproduct {
+    padding: 0px !important;
+  }
+
+  /* Smokehouse */
+  #field_13_101,
+  #field_13_102,
+  #field_13_103,
+  #field_13_104 {
+    height: 440px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_101 > div,
+  #gfield_description_13_108 > div {
+    padding-bottom: 24px;
+  }
+
+  #field_13_105,
+  #field_13_106,
+  #field_13_107,
+  #field_13_108 {
+    height: 355px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #field_13_113,
+  #field_13_114,
+  #field_13_115,
+  #field_13_116,
+  #field_13_122 {
+    height: 440px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #field_13_118,
+  #field_13_119,
+  #field_13_120,
+  #field_13_121,
+  #field_13_110,
+  #field_13_111 {
+    height: 465px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_110 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Appetizers */
+  #field_13_2,
+  #field_13_10 {
+    height: 515px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #field_13_9,
+  #field_13_12,
+  #field_13_13 {
+    height: 485px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_10 > div {
+    padding-bottom: 48px;
+  }
+
+  #gfield_description_13_12 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Gravlox */
+  #field_13_3,
+  #field_13_4,
+  #field_13_6,
+  #field_13_7 {
+    height: 325px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_6 > div,
+  #gfield_description_13_7 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Salads */
+  #field_13_15,
+  #field_13_16 {
+    height: 380px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #field_13_17,
+  #field_13_18 {
+    height: 350px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_15 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_17 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Soups */
+  #field_13_20,
+  #field_13_21 {
+    height: 445px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #field_13_22,
+  #field_13_23,
+  #field_13_24,
+  #field_13_25 {
+    height: 430px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_20 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_23 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Salad dressings */
+  #field_13_27,
+  #field_13_28,
+  #field_13_29,
+  #field_13_30,
+  #field_13_31,
+  #field_13_32 {
+    height: 435px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_27 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Dips */
+  #field_13_34,
+  #field_13_35,
+  #field_13_36,
+  #field_13_37 {
+    height: 460px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_34 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_37 > div {
+    padding-bottom: 42px;
+  }
+
+  /* Chicken Entrees */
+  #field_13_39,
+  #field_13_40,
+  #field_13_41,
+  #field_13_42,
+  #field_13_43 {
+    height: 490px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_43 > div {
+    padding-bottom: 30px;
+  }
+
+  /* Beef Entrees */
+  #field_13_45,
+  #field_13_46,
+  #field_13_47 {
+    height: 505px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_46 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Turkey Entrees */
+  #field_13_49,
+  #field_13_50 {
+    height: 510px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_49 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Fish Entrees */
+  #field_13_53,
+  #field_13_54,
+  #field_13_55 {
+    height: 325px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_54 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Vegetarian Entrees */
+  #field_13_57,
+  #field_13_58 {
+    height: 440px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  /* Side Dishes */
+  #field_13_60,
+  #field_13_61 {
+    height: 435px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_60 > div {
+    padding-bottom: 18px;
+  }
+
+  #field_13_62,
+  #field_13_63 {
+    height: 480px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_63 > div {
+    padding-bottom: 24px;
+  }
+
+  #field_13_64,
+  #field_13_65,
+  #field_13_66,
+  #field_13_143 {
+    height: 460px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_65 > div,
+  #gfield_description_13_66 > div,
+  #gfield_description_13_143 > div {
+    padding-bottom: 24px;
+  }
+
+  /* By the Pound*/
+  #field_13_67,
+  #field_13_68,
+  #field_13_69,
+  #field_13_70,
+  #field_13_71,
+  #field_13_72,
+  /* By the Dozen */
+  #field_13_73 {
+    height: 455px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_68 > div,
+  #gfield_description_13_70 > div,
+  #gfield_description_13_81 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_71 > div {
+    padding-bottom: 43px;
+  }
+
+  /* By the Piece */
+  #field_13_77,
+  #field_13_78,
+  #field_13_79,
+  #field_13_80 {
+    height: 440px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #field_13_81,
+  #field_13_131,
+  #field_13_132 {
+    height: 490px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_77 > div,
+  #gfield_description_13_79 > div,
+  #gfield_description_13_80 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_81 > div {
+    padding-bottom: 72px;
+  }
+
+  /* Set Menus */
+  #field_13_96,
+  #field_13_97 {
+    height: 505px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+  #field_13_98,
+  #field_13_99 {
+    height: 395px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  /* Desserts */
+  #field_13_86,
+  #field_13_88,
+  #field_13_92,
+  #field_13_93,
+  #field_13_94,
+  #field_13_124,
+  #field_13_144 {
+    height: 485px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_88 > div {
+    padding-bottom: 44px;
+  }
+
+  #field_13_90,
+  #field_13_91 {
+    height: 480px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+
+  #gfield_description_13_91 > div,
+  #gfield_description_13_92 > div,
+  #gfield_description_13_93 > div,
+  #gfield_description_13_94 > div,
+  #gfield_description_13_144 > div {
+    padding-bottom: 18px;
+  }
+  /* Leah's Desserts */
+  #field_13_126,
+  #field_13_127 {
+    height: 300px !important;
+    width: 49% !important;
+    max-width: 350px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #gform_submit_button_13 {
+    left: 45%;
+  }
+
+  #gfield_description_13_43 > div,
+  #gfield_description_13_12 > div,
+  #gfield_description_13_6 > div,
+  #gfield_description_13_15 > div,
+  #gfield_description_13_23 > div,
+  #gfield_description_13_27 > div,
+  #gfield_description_13_63 > div,
+  #gfield_description_13_66 > div,
+  #gfield_description_13_143 > div,
+  #gfield_description_13_68 > div,
+  #gfield_description_13_71 > div,
+  #gfield_description_13_77 > div,
+  #gfield_description_13_37 > div {
+    padding-bottom: 0px;
+  }
+  #field_13_149,
+  #field_13_150,
+  #field_13_151,
+  #field_13_152,
+  #field_13_153,
+  #field_13_154,
+  #field_13_155,
+  #field_13_156,
+  #field_13_157,
+  #field_13_158,
+  #field_13_159,
+  #field_13_160,
+  #field_13_161,
+  #field_13_162,
+  #field_13_163 {
+    margin-top: 0px !important;
+  }
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    width: 80% !important;
+  }
+
+  .gf_left_third,
+  .gf_middle_third {
+    margin-right: 8px !important;
+  }
+
+  /* Smokehouse */
+  #field_13_101,
+  #field_13_102,
+  #field_13_103,
+  #field_13_104 {
+    height: 360px !important;
+    width: 24% !important;
+    max-width: 235px !important;
+  }
+
+  #gfield_description_13_101 > div {
+    padding-bottom: 24px;
+  }
+
+  #field_13_105,
+  #field_13_106,
+  #field_13_107,
+  #field_13_108 {
+    height: 315px !important;
+    width: 24% !important;
+    max-width: 235px !important;
+  }
+
+  #gfield_description_13_105 > div {
+    padding-bottom: 48px;
+  }
+
+  #gfield_description_13_107 > div,
+  #gfield_description_13_108 > div {
+    padding-bottom: 66px;
+  }
+
+  /* Smokehouse Condiments */
+  #field_13_113,
+  #field_13_114,
+  #field_13_115,
+  #field_13_116 {
+    height: 320px !important;
+    width: 24% !important;
+    max-width: 235px !important;
+  }
+
+  #field_13_118,
+  #field_13_119,
+  #field_13_120,
+  #field_13_121 {
+    height: 385px !important;
+    width: 24% !important;
+    max-width: 235px !important;
+  }
+
+  #gfield_description_13_118 > div,
+  #gfield_description_13_119 > div,
+  #gfield_description_13_121 > div {
+    padding-bottom: 18px;
+  }
+
+  #field_13_110,
+  #field_13_111 {
+    height: 360px !important;
+    width: 24% !important;
+    max-width: 235px !important;
+  }
+
+  #gfield_description_13_110 > div {
+    padding-bottom: 38px;
+  }
+
+  /* Appetizers */
+  #field_13_2,
+  #field_13_10,
+  #field_13_9 {
+    height: 490px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+  #field_13_12,
+  #field_13_13 {
+    height: 435px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_10 > div {
+    padding-bottom: 72px;
+  }
+
+  #gfield_description_13_9 > div {
+    padding-bottom: 48px;
+  }
+
+  /* Gravlox */
+  #field_13_3,
+  #field_13_4,
+  #field_13_6,
+  #field_13_7 {
+    height: 295px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_7 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Salads */
+  #field_13_15,
+  #field_13_16,
+  #field_13_17 {
+    height: 365px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+  #field_13_18 {
+    height: 315px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_16 > div {
+    padding-bottom: 18px;
+  }
+  #gfield_description_13_17 > div {
+    padding-bottom: 66px;
+  }
+
+  /* Soups */
+  #field_13_20,
+  #field_13_21,
+  #field_13_22 {
+    height: 395px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+  #field_13_23,
+  #field_13_24,
+  #field_13_25 {
+    height: 385px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_20 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_22 > div {
+    padding-bottom: 8px;
+  }
+
+  /* Salad dressings */
+  #field_13_27,
+  #field_13_28,
+  #field_13_29,
+  #field_13_30,
+  #field_13_31,
+  #field_13_32 {
+    height: 385px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_29 > div,
+  #gfield_description_13_30 > div,
+  #gfield_description_13_31 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Dips */
+  #field_13_34,
+  #field_13_35,
+  #field_13_36 {
+    height: 430px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+  #field_13_37 {
+    height: 370px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_34 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Chicken Entrees */
+  #field_13_39,
+  #field_13_40,
+  #field_13_41 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+  #field_13_43 {
+    height: 455px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_41 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_40 > div {
+    padding-bottom: 48px;
+  }
+
+  /* Beef Entrees */
+  #field_13_45,
+  #field_13_46,
+  #field_13_47 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_46 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Turkey Entrees */
+  #field_13_49,
+  #field_13_50 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_49 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Fish Entrees */
+  #field_13_53,
+  #field_13_54,
+  #field_13_55 {
+    height: 295px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_54 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Vegetarian Entrees */
+  #field_13_57 {
+    height: 410px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  /* Side Dishes */
+  #field_13_60,
+  #field_13_61,
+  #field_13_62 {
+    height: 435px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_60 > div {
+    padding-bottom: 48px;
+  }
+
+  #gfield_description_13_61 > div {
+    padding-bottom: 27px;
+  }
+
+  #field_13_63,
+  #field_13_64,
+  #field_13_65 {
+    height: 410px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_65 > div {
+    padding-bottom: 24px;
+  }
+
+  #field_13_66,
+  #field_13_143 {
+    height: 390px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  /* By the Pound*/
+  #field_13_67,
+  #field_13_68,
+  #field_13_69,
+  #field_13_70,
+  #field_13_71,
+  #field_13_72 {
+    height: 410px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_67 > div,
+  #gfield_description_13_71 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_68 > div,
+  #gfield_description_13_70 > div {
+    padding-bottom: 41px;
+  }
+
+  #field_13_73 {
+    height: 370px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  /* By the Piece */
+  #field_13_77,
+  #field_13_78,
+  #field_13_79 {
+    height: 390px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_79 > div {
+    padding-bottom: 18px;
+  }
+
+  #field_13_80,
+  #field_13_81,
+  #field_13_131,
+  #field_13_132 {
+    height: 440px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_80 > div {
+    padding-bottom: 70px;
+  }
+
+  #gfield_description_13_81 > div {
+    padding-bottom: 53px;
+  }
+
+  /* Set Menus */
+  #field_13_98,
+  #field_13_99 {
+    height: 360px !important;
+    width: 49% !important;
+    max-width: 486px !important;
+  }
+  #field_13_96,
+  #field_13_97 {
+    height: 430px !important;
+    width: 49% !important;
+    max-width: 486px !important;
+  }
+
+  /* Desserts */
+  #field_13_86,
+  #field_13_88,
+  #field_13_90 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #field_13_91,
+  #field_13_92,
+  #field_13_93,
+  #field_13_94,
+  #field_13_124,
+  #field_13_144 {
+    height: 435px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_92 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_86 > div {
+    padding-bottom: 18px;
+  }
+  #gfield_description_13_88 > div {
+    padding-bottom: 66px;
+  }
+
+  #gfield_description_13_91 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_92 > div,
+  #gfield_description_13_94 > div,
+  #gfield_description_13_144 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_93 > div {
+    padding-bottom: 44px;
+  }
+
+  /* Leah's Desserts */
+  #field_13_126,
+  #field_13_127 {
+    height: 290px !important;
+    width: 32% !important;
+    max-width: 305px !important;
+  }
+
+  #gfield_description_13_126 > div {
+    padding-bottom: 18px;
+  }
+}
+
+@media only screen and (min-width: 1078px) {
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    width: 60% !important;
+  }
+
+  #field_13_149,
+  #field_13_150,
+  #field_13_151,
+  #field_13_152,
+  #field_13_153,
+  #field_13_154,
+  #field_13_155,
+  #field_13_156,
+  #field_13_157,
+  #field_13_158,
+  #field_13_159,
+  #field_13_160,
+  #field_13_161,
+  #field_13_162,
+  #field_13_163 {
+    display: block;
+  }
+
+  /* Smokehouse */
+  #field_13_101,
+  #field_13_102,
+  #field_13_103,
+  #field_13_104 {
+    height: 380px !important;
+    width: 24% !important;
+    max-width: 260px !important;
+  }
+
+  #gfield_description_13_101 > div {
+    padding-bottom: 64px;
+  }
+
+  #gfield_description_13_102 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_104 > div {
+    padding-bottom: 42px;
+  }
+
+  #gfield_description_13_105 > div {
+    padding-bottom: 44px;
+  }
+
+  #field_13_105,
+  #field_13_106,
+  #field_13_107,
+  #field_13_108 {
+    height: 330px !important;
+    width: 24% !important;
+    max-width: 260px !important;
+  }
+
+  #gfield_description_13_107 > div {
+    padding-bottom: 44px;
+  }
+
+  #gfield_description_13_107 > div,
+  #gfield_description_13_108 > div {
+    padding-bottom: 64px;
+  }
+
+  /* Smokehouse Condiments */
+  #field_13_113,
+  #field_13_114,
+  #field_13_115,
+  #field_13_116 {
+    height: 350px !important;
+    width: 24% !important;
+    max-width: 260px !important;
+  }
+  #field_13_118,
+  #field_13_119,
+  #field_13_120,
+  #field_13_121 {
+    height: 415px !important;
+    width: 24% !important;
+    max-width: 260px !important;
+  }
+
+  #field_13_110,
+  #field_13_111 {
+    height: 370px !important;
+    width: 24% !important;
+    max-width: 260px !important;
+  }
+
+  #gfield_description_13_110 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Appetizers */
+  #field_13_2,
+  #field_13_10,
+  #field_13_9 {
+    height: 505px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+  #field_13_12,
+  #field_13_13 {
+    height: 480px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_10 > div {
+    padding-bottom: 48px;
+  }
+
+  #gfield_description_13_9 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_12 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Gravlox */
+  #field_13_3,
+  #field_13_4,
+  #field_13_6,
+  #field_13_7 {
+    height: 325px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_6 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Salads */
+  #field_13_15,
+  #field_13_16,
+  #field_13_17 {
+    height: 375px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+  #field_13_18 {
+    height: 345px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_15 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_16 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_17 > div {
+    padding-bottom: 48px;
+  }
+
+  /* Soups */
+  #field_13_20,
+  #field_13_21,
+  #field_13_22 {
+    height: 440px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #field_13_23,
+  #field_13_24,
+  #field_13_25 {
+    height: 415px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_24 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Salad dressings */
+  #field_13_27,
+  #field_13_28,
+  #field_13_29,
+  #field_13_30,
+  #field_13_31,
+  #field_13_32 {
+    height: 430px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_29 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Dips */
+  #field_13_34,
+  #field_13_35,
+  #field_13_36 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+  #field_13_37 {
+    height: 410px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_34 > div {
+    padding-bottom: 44px;
+  }
+
+  #gfield_description_13_36 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Chicken Entrees */
+  #field_13_39,
+  #field_13_40,
+  #field_13_41 {
+    height: 485px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_39 > div {
+    padding-bottom: 18px;
+  }
+
+  #field_13_43 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_40 > div {
+    padding-bottom: 44px;
+  }
+
+  #gfield_description_13_41 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Beef Entrees */
+  #field_13_45,
+  #field_13_46,
+  #field_13_47 {
+    height: 505px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_46 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Turkey Entrees */
+  #field_13_49,
+  #field_13_50 {
+    height: 505px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_49 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_50 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Fish Entrees */
+  #field_13_53,
+  #field_13_54,
+  #field_13_55 {
+    height: 320px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_54 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Vegetarian Entrees */
+  #field_13_57 {
+    height: 435px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  /* Side Dishes */
+  #field_13_60,
+  #field_13_61,
+  #field_13_62 {
+    height: 480px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_60 > div {
+    padding-bottom: 66px;
+  }
+
+  #gfield_description_13_61 > div {
+    padding-bottom: 48px;
+  }
+
+  #field_13_63,
+  #field_13_64,
+  #field_13_65 {
+    height: 455px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #field_13_66,
+  #field_13_143 {
+    height: 430px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+  /* By the Pound*/
+  #field_13_67,
+  #field_13_68,
+  #field_13_69 {
+    height: 440px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #field_13_70,
+  #field_13_71,
+  #field_13_72 {
+    height: 455px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #field_13_73 {
+    height: 415px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_70 > div,
+  #gfield_description_13_71 > div {
+    padding-bottom: 43px;
+  }
+
+  #gfield_description_13_67 > div {
+    padding-bottom: 7px;
+  }
+
+  #gfield_description_13_68 > div {
+    padding-bottom: 24px;
+  }
+
+  /* By the Piece */
+  #field_13_77,
+  #field_13_78,
+  #field_13_79 {
+    height: 435px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #field_13_80,
+  #field_13_81,
+  #field_13_131,
+  #field_13_132 {
+    height: 490px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_77 > div,
+  #gfield_description_13_79 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_80 > div,
+  #gfield_description_13_81 > div {
+    padding-bottom: 72px;
+  }
+
+  /* Set Menus */
+  #field_13_98,
+  #field_13_99 {
+    height: 360px !important;
+    width: 49% !important;
+    max-width: 528px !important;
+  }
+  #field_13_96,
+  #field_13_97 {
+    height: 380px !important;
+    width: 49% !important;
+    max-width: 528px !important;
+  }
+
+  /* Desserts */
+  #field_13_86,
+  #field_13_88,
+  #field_13_90 {
+    height: 485px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+  #gfield_description_13_86 > div {
+    padding-bottom: 0px;
+  }
+  #gfield_description_13_88 > div {
+    padding-bottom: 44px;
+  }
+  #field_13_91,
+  #field_13_92,
+  #field_13_93,
+  #field_13_94,
+  #field_13_124,
+  #field_13_144 {
+    height: 460px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+  #gfield_description_13_91 > div {
+    padding-bottom: 0px;
+  }
+  #gfield_description_13_92 > div,
+  #gfield_description_13_93 > div,
+  #gfield_description_13_144 > div {
+    padding-bottom: 44px;
+  }
+
+  #gfield_description_13_94 > div {
+    padding-bottom: 24px;
+  }
+  /* Leah's Desserts */
+  #field_13_126,
+  #field_13_127 {
+    height: 310px !important;
+    width: 32% !important;
+    max-width: 345px !important;
+  }
+
+  #gfield_description_13_126 > div {
+    padding-bottom: 18px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #field_13_149,
+  #field_13_150,
+  #field_13_151,
+  #field_13_152,
+  #field_13_153,
+  #field_13_154,
+  #field_13_155,
+  #field_13_156,
+  #field_13_157,
+  #field_13_158,
+  #field_13_159,
+  #field_13_160,
+  #field_13_161,
+  #field_13_162,
+  #field_13_163 {
+    display: block;
+  }
+
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    width: 60% !important;
+  }
+
+  /* Smokehouse */
+  #field_13_101,
+  #field_13_102,
+  #field_13_103,
+  #field_13_104 {
+    height: 430px !important;
+    width: 24% !important;
+    max-width: 320px !important;
+  }
+
+  #gfield_description_13_101 > div {
+    padding-bottom: 41px;
+  }
+
+  #gfield_description_13_102 > div,
+  #gfield_description_13_104 > div {
+    padding-bottom: 18px;
+  }
+
+  #field_13_105,
+  #field_13_106,
+  #field_13_107,
+  #field_13_108 {
+    height: 360px !important;
+    width: 24% !important;
+    max-width: 320px !important;
+  }
+
+  #gfield_description_13_105 > div,
+  #gfield_description_13_107 > div,
+  #gfield_description_13_108 > div {
+    padding-bottom: 48px;
+  }
+
+  /* Smokehouse Condiments */
+  #field_13_113,
+  #field_13_114,
+  #field_13_115,
+  #field_13_116 {
+    height: 410px !important;
+    width: 24% !important;
+    max-width: 320px !important;
+  }
+  /* Smokehouse Sauces */
+  #field_13_118,
+  #field_13_119,
+  #field_13_120,
+  #field_13_121 {
+    height: 440px !important;
+    width: 24% !important;
+    max-width: 320px !important;
+  }
+
+  #gfield_description_13_118 > div,
+  #gfield_description_13_119 > div,
+  #gfield_description_13_121 > div,
+  #gfield_description_13_120 > div,
+  #gfield_description_13_111 > div {
+    padding-bottom: 0px;
+  }
+
+  #field_13_110,
+  #field_13_111 {
+    height: 430px !important;
+    width: 24% !important;
+    max-width: 320px !important;
+  }
+
+  #gfield_description_13_110 > div {
+    padding-bottom: 18px;
+  }
+
+  /* Appetizers */
+  #field_13_2,
+  #field_13_10,
+  #field_13_9 {
+    height: 590px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+  #field_13_12,
+  #field_13_13 {
+    height: 550px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_9 > div,
+  #gfield_description_13_10 > div {
+    padding-bottom: 48px;
+  }
+
+  #gfield_description_13_12 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Gravlox */
+  #field_13_3,
+  #field_13_4,
+  #field_13_6,
+  #field_13_7 {
+    height: 360px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_6 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_7 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Salads */
+  #field_13_15,
+  #field_13_16,
+  #field_13_17 {
+    height: 410px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_15 > div {
+    padding-bottom: 0px;
+  }
+
+  #field_13_18 {
+    height: 390px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_17 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Soups */
+  #field_13_20,
+  #field_13_21,
+  #field_13_22,
+  #field_13_23,
+  #field_13_24,
+  #field_13_25 {
+    height: 520px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_20 > div,
+  #gfield_description_13_22 > div,
+  #gfield_description_13_23 > div,
+  #gfield_description_13_24 > div,
+  #gfield_description_13_25 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_22 > div {
+    padding-bottom: 8px;
+  }
+
+  /* Salad dressings */
+  #field_13_27,
+  #field_13_28,
+  #field_13_29,
+  #field_13_30,
+  #field_13_31,
+  #field_13_32 {
+    height: 500px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_27 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_29 > div,
+  #gfield_description_13_30 > div,
+  #gfield_description_13_31 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_32 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_39 > div {
+    padding-bottom: 0px;
+  }
+  /* Dips */
+  #field_13_34,
+  #field_13_35,
+  #field_13_36 {
+    height: 540px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+  #field_13_37 {
+    height: 500px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_34 > div {
+    padding-bottom: 42px;
+  }
+
+  #gfield_description_13_36 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Chicken Entrees */
+  #field_13_39,
+  #field_13_40,
+  #field_13_41 {
+    height: 550px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+  #field_13_43 {
+    height: 540px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_40 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Beef Entrees */
+  #field_13_45,
+  #field_13_46,
+  #field_13_47 {
+    height: 570px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_46 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Turkey Entrees */
+  #field_13_49,
+  #field_13_50 {
+    height: 590px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_49 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_50 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Fish Entrees */
+  #field_13_53,
+  #field_13_54,
+  #field_13_55 {
+    height: 370px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_54 > div {
+    padding-bottom: 24px;
+  }
+
+  /* Vegetarian Entrees */
+  #field_13_57 {
+    height: 520px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  /* Side Dishes */
+  #field_13_60,
+  #field_13_61,
+  #field_13_62 {
+    height: 540px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_60 > div {
+    padding-bottom: 38px;
+  }
+
+  #gfield_description_13_61 > div {
+    padding-bottom: 24px;
+  }
+
+  #field_13_63,
+  #field_13_64,
+  #field_13_65,
+  #field_13_66,
+  #field_13_143 {
+    height: 520px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_65 > div {
+    padding-bottom: 28px;
+  }
+
+  #gfield_description_13_66 > div {
+    padding-bottom: 24px;
+  }
+
+  /* By the Pound*/
+  #field_13_67,
+  #field_13_68,
+  #field_13_69,
+  #field_13_70,
+  #field_13_71,
+  #field_13_72,
+  /* By the Dozen */
+  #field_13_73 {
+    height: 520px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_68 > div,
+  #gfield_description_13_70 > div,
+  #gfield_description_13_71 > div,
+  #gfield_description_13_73 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_69 > div,
+  #gfield_description_13_77 > div,
+  #gfield_description_13_79 > div {
+    padding-bottom: 0px;
+  }
+
+  /* By the Piece */
+  #field_13_77,
+  #field_13_78,
+  #field_13_79,
+  #field_13_80,
+  #field_13_81,
+  #field_13_131,
+  #field_13_132 {
+    height: 500px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #field_13_80,
+  #field_13_81,
+  #field_13_131,
+  #field_13_132 {
+    height: 540px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_131 > div {
+    padding-bottom: 0px;
+  }
+
+  #gfield_description_13_80 > div,
+  #gfield_description_13_81 > div {
+    padding-bottom: 48px;
+  }
+
+  /* Set Menus */
+  #field_13_96,
+  #field_13_97 {
+    height: 370px !important;
+    width: 49% !important;
+    max-width: 660px !important;
+  }
+  #field_13_98,
+  #field_13_99 {
+    height: 300px !important;
+    width: 49% !important;
+    max-width: 660px !important;
+  }
+
+  /* Desserts */
+  #field_13_86,
+  #field_13_88,
+  #field_13_90 {
+    height: 560px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+  #field_13_91,
+  #field_13_92,
+  #field_13_93,
+  #field_13_94,
+  #field_13_124,
+  #field_13_144 {
+    height: 550px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_86 > div,
+  #gfield_description_13_92 > div,
+  #gfield_description_13_93 > div,
+  #gfield_description_13_94 > div,
+  #gfield_description_13_144 > div {
+    padding-bottom: 24px;
+  }
+
+  #gfield_description_13_88 > div {
+    padding-bottom: 44px;
+  }
+
+  #gfield_description_13_86 > div,
+  #gfield_description_13_91 > div {
+    padding-bottom: 0px;
+  }
+
+  /* Leah's Desserts */
+  #field_13_126,
+  #field_13_127 {
+    height: 360px !important;
+    width: 32% !important;
+    max-width: 420px !important;
+  }
+
+  #gfield_description_13_86 > div {
+    padding-bottom: 18px;
+  }
+
+  #gfield_description_13_126 > div {
+    padding-bottom: 18px;
+  }
+}
+
+#input_13_166 > li.gchoice_13_166_0,
+#input_13_166 > li.gchoice_13_166_1 {
+  color: black !important;
+  font-size: 1.2em;
+}

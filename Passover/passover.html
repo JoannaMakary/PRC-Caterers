@@ -1,0 +1,62 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Unable to type in date
+    document.getElementById("input_13_164").readOnly = true;
+
+    // Get the number of the day (1-365)
+    Date.prototype.getDOY = function () {
+      var onejan = new Date(this.getFullYear(), 0, 1);
+      return Math.ceil((this - onejan) / 86400000);
+    };
+
+    var d = new Date();
+    const dayNumber = d.getDOY();
+
+    // When date is clicked
+    var dateInput = document.querySelector("#input_13_164");
+    dateInput.addEventListener("mouseup", filterFebruary);
+
+    function filterFebruary() {
+      // Check if selected month changes to February and disable February
+      var februaryDays = document.querySelectorAll("tbody td");
+      // Disable ALL days of February
+      februaryDays.forEach(function (element) {
+        element.classList.add("ui-datepicker-unselectable");
+        element.classList.add("ui-state-disabled");
+      });
+
+      // when month selector is clicked
+      var monthSelector = document.querySelector(
+        "#ui-datepicker-div > div > div > select.ui-datepicker-month"
+      );
+      monthSelector.addEventListener("change", filterMarch);
+    }
+
+    function filterMarch() {
+      var marchDays = document.querySelectorAll("tbody td");
+      // Disable ALL days of March
+      marchDays.forEach(function (element) {
+        element.classList.add("ui-datepicker-unselectable");
+        element.classList.add("ui-state-disabled");
+      });
+
+      // March 25th
+      var firstDay = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(4)"
+      );
+      // March 26th
+      var secondDay = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(5)"
+      );
+
+      // if it before final day to order
+      if (dayNumber <= 81) {
+        firstDay.classList.remove("ui-datepicker-unselectable");
+        firstDay.classList.remove("ui-state-disabled");
+
+        secondDay.classList.remove("ui-datepicker-unselectable");
+        secondDay.classList.remove("ui-state-disabled");
+      }
+    }
+  });
+</script>
