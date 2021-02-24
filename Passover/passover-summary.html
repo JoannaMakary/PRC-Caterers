@@ -1,0 +1,40 @@
+<script>
+  var orderForm = document.querySelector(
+    "div.elementor-element.elementor-element-d659360.elementor-widget.elementor-widget-text-editor"
+  );
+
+  // looks for change in order form
+  orderForm.addEventListener("DOMSubtreeModified", function () {
+    // Removed ability to click to order summary of each
+    var productNamePassover = document.querySelectorAll(
+      "a[href='https://prccaterers.com/product/passover-menu-summary-copy/?wc_gforms_cart_item_key=543bff0ff317c4ab53500e45252b017c']"
+    );
+    productNamePassover.forEach(function (element) {
+      element.setAttribute("href", "#");
+    });
+
+    var customerTotal = document.querySelector(
+      "body > main > div > div.elementor.elementor-4054 > div > div > section > div > div > div > div > div > div.elementor-element.elementor-element-d659360.elementor-widget.elementor-widget-text-editor > div > div > div > div.cart-collaterals > div > table > tbody > tr.order-total > td > strong > span > bdi"
+    );
+
+    if (customerTotal.textContent == "$0.00") {
+      var checkoutButton = document.querySelectorAll(".checkout-button");
+      var checkoutLink = document.querySelectorAll("a[href='https://prccaterers.com/checkout/']");
+
+      checkoutLink.forEach(function (element) {
+        element.setAttribute("href", "#");
+        element.classList.remove("checkout-button");
+        element.classList.remove("alt");
+        element.classList.remove("wc-forward");
+        element.setAttribute("id", "error-checkout");
+        element.text = "YOUR TOTAL IS $0.00, PLEASE CHECK YOUR ORDER";
+      });
+
+      checkoutButton.forEach(function (element) {
+        element.addEventListener("click", sendBack);
+      });
+    } else {
+      console.log("");
+    }
+  });
+</script>
