@@ -1,0 +1,53 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    var pickupSelect = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(2) > input[type=radio]"
+    );
+    var deliverySelect = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(3)"
+    );
+
+    var nextButton = document.querySelector(
+      "#form_actions > input.button.alt.yith-wcms-button.next"
+    );
+
+    var pickupButton = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(2) > input[type=radio]"
+    );
+    var deliveryButton = document.querySelector(
+      "#billing_selectdelivery_field > fieldset > label:nth-child(3) > input[type=radio]"
+    );
+
+    var pickupEles = document.querySelectorAll(
+      "#billing_pickup_time_slot_field"
+    );
+
+    var deliveryEles = document.querySelectorAll(
+      "#billing_delivery_time_slot_field"
+    );
+
+    deliveryEles.forEach(function (element) {
+      element.style.display = "none";
+      element.style.display = "none";
+    });
+
+    function pickupFunction() {
+      if (pickupSelect.checked == true) {
+        console.log("pickup");
+        pickupEles.forEach(function (element) {
+          element.style.display = "block";
+          element.style.display = "block";
+        });
+        deliveryEles.forEach(function (element) {
+          element.style.display = "none";
+          element.style.display = "none";
+        });
+      }
+    }
+
+
+
+    pickupButton.addEventListener("click", pickupFunction);
+    deliveryButton.addEventListener("click", deliveryFunction);
+  });
+</script>

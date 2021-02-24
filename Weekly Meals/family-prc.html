@@ -1,0 +1,142 @@
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Unable to type in date
+    document.getElementById("input_7_108").readOnly = true;
+
+    // Get the number of the day (1-365)
+    Date.prototype.getDOY = function () {
+      var onejan = new Date(this.getFullYear(), 0, 1);
+      return Math.ceil((this - onejan) / 86400000);
+    };
+
+    var d = new Date();
+    const dayNumber = d.getDOY();
+
+    // When date is clicked
+    var dateInput = document.querySelector("#field_7_108");
+    dateInput.addEventListener("mouseup", trialFunction);
+
+    function trialFunction() {
+      // Check if selected month changes to January and disable January
+      var januaryDays = document.querySelectorAll("tbody td");
+      // Disable ALL days of January
+      januaryDays.forEach(function (element) {
+        element.classList.add("ui-datepicker-unselectable");
+        element.classList.add("ui-state-disabled");
+      });
+
+      // January Fridays of the Week selectors
+      var firstWeekJanuaryFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(1) > td:nth-child(5)"
+      );
+      var secondWeekJanuaryFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(2) > td:nth-child(5)"
+      );
+      var thirdWeekJanuaryFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(3) > td:nth-child(5)"
+      );
+      var fourthWeekJanuaryFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(5)"
+      );
+      var fifthWeekJanuaryFriday = document.querySelector(
+        "#ui-datepicker-div > table > tbody > tr:nth-child(5) > td:nth-child(5)"
+      );
+
+      // if it before Thursday, January 7th
+      if (dayNumber <= 7) {
+        secondWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+        secondWeekJanuaryFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 2 & Thursday
+        if (dayNumber == 7) {
+          // if it is BEFORE 10am
+          if (d.getHours() < 10) {
+            secondWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+            secondWeekJanuaryFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block
+          if (d.getHours() >= 10) {
+            secondWeekJanuaryFriday.classList.add("ui-datepicker-unselectable");
+            secondWeekJanuaryFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it before Thursday, January 14th
+      else if (dayNumber >= 8 && dayNumber <= 14) {
+        thirdWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+        thirdWeekJanuaryFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 3 & Thursday
+        if (dayNumber == 14) {
+          // if it is BEFORE 10am
+          if (d.getHours() < 10) {
+            thirdWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+            thirdWeekJanuaryFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block
+          if (d.getHours() >= 10) {
+            thirdWeekJanuaryFriday.classList.add("ui-datepicker-unselectable");
+            thirdWeekJanuaryFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it before Thursday, January 21st
+      else if (dayNumber >= 15 && dayNumber <= 21) {
+        fourthWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+        fourthWeekJanuaryFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 3 & Thursday
+        if (dayNumber == 21) {
+          // if it is BEFORE 10am
+          if (d.getHours() < 10) {
+            fourthWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+            fourthWeekJanuaryFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block
+          if (d.getHours() >= 10) {
+            fourthWeekJanuaryFriday.classList.add("ui-datepicker-unselectable");
+            fourthWeekJanuaryFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it before Thursday, January 21st
+      else if (dayNumber >= 15 && dayNumber <= 21) {
+        fourthWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+        fourthWeekJanuaryFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 3 & Thursday
+        if (dayNumber == 21) {
+          // if it is BEFORE 10am
+          if (d.getHours() < 10) {
+            fourthWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+            fourthWeekJanuaryFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block
+          if (d.getHours() >= 10) {
+            fourthWeekJanuaryFriday.classList.add("ui-datepicker-unselectable");
+            fourthWeekJanuaryFriday.classList.add("ui-state-disabled");
+          }
+        }
+      }
+
+      // if it before Thursday, January 28th
+      else if (dayNumber >= 22 && dayNumber <= 28) {
+        fifthWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+        fifthWeekJanuaryFriday.classList.remove("ui-state-disabled");
+        // if it is WEEK 3 & Thursday
+        if (dayNumber == 29) {
+          // if it is BEFORE 10am
+          if (d.getHours() < 10) {
+            fifthWeekJanuaryFriday.classList.remove("ui-datepicker-unselectable");
+            fifthWeekJanuaryFriday.classList.remove("ui-state-disabled");
+          }
+          // if it is after 10am block
+          if (d.getHours() >= 10) {
+            fifthWeekJanuaryFriday.classList.add("ui-datepicker-unselectable");
+            fifthWeekJanuaryFriday.classList.add("ui-state-disabled");
+          }
+        }
+      } else {
+      }
+    }
+  });
+</script>

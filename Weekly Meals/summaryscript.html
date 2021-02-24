@@ -1,0 +1,183 @@
+<script>
+  var orderForm = document.querySelector(
+    "div.elementor-element.elementor-element-d659360.elementor-widget.elementor-widget-text-editor"
+  );
+
+  // looks for change in order form
+  orderForm.addEventListener("DOMSubtreeModified", function () {
+    // Check if there are meals in the summary
+
+    // Removed ability to click to order summary of each
+    var productNameFamily = document.querySelectorAll("a[href='https://prccaterers.com/product/family-meal-summary/']");
+    productNameFamily.forEach(function (element) {
+      element.setAttribute("href", "#");
+    });
+    var productNameFriday = document.querySelectorAll(
+      "a[href='https://prccaterers.com/product/friday-night-dinner-summary/']"
+    );
+    productNameFriday.forEach(function (element) {
+      element.setAttribute("href", "#");
+    });
+
+    var checkoutButton = document.querySelectorAll(".checkout-button");
+    var checkoutLink = document.querySelectorAll("a[href='https://prccaterers.com/checkout/']");
+
+    var familyMealProduct = document.querySelector(" dt.variation-ChineseTake-OutNight");
+    var fridayNightProduct = document.querySelector("dt.variation-FridayNightMenu");
+
+    // if the family meal exists
+    if (familyMealProduct) {
+      if (familyMealProduct.length != 0) {
+        checkFamilyMeals();
+      }
+    }
+
+    // if the friday meal exists
+    if (fridayNightProduct) {
+      if (fridayNightProduct.length != 0) {
+        checkFridayMeals();
+      }
+    }
+
+    // If no meal exists, send alert to client
+    function checkFamilyMeals() {
+      var familyMealQuantity = document.querySelector("dd.variation-ChineseTake-OutNight");
+      var familyMealQuantities = familyMealQuantity.querySelector("p").textContent;
+
+      if (familyMealQuantities.length == 27) {
+        familyMealQuantities = familyMealQuantities.substring(6, 7);
+        familyMealQuantities = parseInt(familyMealQuantities);
+      }
+
+      // If meal is less than 4, alert client
+      if (familyMealQuantities < 4 || familyMealQuantities < 0) {
+        toggleAlertFamily();
+      }
+    }
+
+    // If no meal exists, send alert to client
+    function checkFridayMeals() {
+      var fridayNightQuantity = document.querySelector("dd.variation-FridayNightMenu");
+      var fridayNightQuantities = fridayNightQuantity.querySelector("p").textContent;
+
+      if (fridayNightQuantities.length == 27) {
+        fridayNightQuantities = fridayNightQuantities.substring(6, 7);
+        fridayNightQuantities = parseInt(fridayNightQuantities);
+      }
+
+      //  If meal is less than 2, alert client
+      if (fridayNightQuantities < 2 || fridayNightQuantities < 0) {
+        toggleAlertFriday();
+      }
+    }
+
+    // Send alert to client that they must add a meal
+    function toggleAlertFamily() {
+      checkoutLink.forEach(function (element) {
+        element.setAttribute("href", "#");
+        element.classList.remove("checkout-button");
+        element.classList.remove("alt");
+        element.classList.remove("wc-forward");
+        element.setAttribute("id", "error-checkout");
+        element.text = "Please order a minimum of FOUR family meals";
+      });
+
+      checkoutButton.forEach(function (element) {
+        element.addEventListener("click", sendBack);
+      });
+    }
+
+    // Send alert to client that they must add a meal
+    function toggleAlertFriday() {
+      checkoutLink.forEach(function (element) {
+        element.setAttribute("href", "#");
+        element.classList.remove("checkout-button");
+        element.classList.remove("alt");
+        element.classList.remove("wc-forward");
+        element.setAttribute("id", "error-checkout");
+        element.text = "Please order a minimum of TWO Friday Night meals";
+      });
+
+      checkoutButton.forEach(function (element) {
+        element.addEventListener("click", sendBack);
+      });
+    }
+
+    function sendBack() {
+      window.history.back();
+    }
+
+    var d = new Date();
+    var todaysDay = d.getDate().toString(); // day Number (1-31)
+
+    var familyMealSummary = document.querySelector(
+      "tr.woocommerce-cart-form__cart-item.cart_item > td.product-name > a"
+    ).text;
+    var familyTrue = familyMealSummary.includes("Family Meal Order Summary");
+
+    // if Family Meal Order Summary Exists
+    if (familyTrue) {
+      var orderForDate = document.querySelector("dd.variation-OrderforDate");
+      var orderString = orderForDate.querySelector("p").textContent;
+
+      // if it is SAME DAY order
+      if (orderString.substring(3, 5).includes(todaysDay)) {
+        // if it is AFTER 10AM
+        if (d.getHours() >= 10) {
+          toggleAlertTime();
+        }
+      }
+    }
+
+    var fridayNightSummary = document.querySelector(
+      "tr.woocommerce-cart-form__cart-item.cart_item > td.product-name > a"
+    ).text;
+    var fridayTrue = fridayNightSummary.includes("Friday Night Dinner Summary");
+
+    // if Friday Night Order Summary Exists
+    if (fridayTrue) {
+      var orderForDate = document.querySelector("dd.variation-OrderforDate");
+      var orderString = orderForDate.querySelector("p").textContent;
+
+      // if it is THURSDAY
+      if (d.getDay() == 5) {
+        // if it is AFTER 10AM
+        if (d.getHours() >= 10) {
+          toggleAlertFridayTime();
+        }
+      }
+    }
+
+    // Send alert to client that it is too late for same-day orders
+    function toggleAlertTime() {
+      checkoutLink.forEach(function (element) {
+        element.setAttribute("href", "#");
+        element.classList.remove("checkout-button");
+        element.classList.remove("alt");
+        element.classList.remove("wc-forward");
+        element.setAttribute("id", "error-checkout");
+        element.text = "Sorry, same-day orders are only available before 10AM.";
+      });
+
+      checkoutButton.forEach(function (element) {
+        element.addEventListener("click", sendBack);
+      });
+    }
+
+    // Send alert to client that it is too late for Friday Night order
+    function toggleAlertFridayTime() {
+      checkoutLink.forEach(function (element) {
+        element.setAttribute("href", "#");
+        element.classList.remove("checkout-button");
+        element.classList.remove("alt");
+        element.classList.remove("wc-forward");
+        element.setAttribute("id", "error-checkout");
+        element.text = "Sorry, Friday Night orders are only available before Thursday @ 10AM.";
+      });
+
+      checkoutButton.forEach(function (element) {
+        element.addEventListener("click", sendBack);
+      });
+    }
+  });
+</script>

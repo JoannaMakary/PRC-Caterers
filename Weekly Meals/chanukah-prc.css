@@ -1,0 +1,523 @@
+/* HIDE ALL UNTIL NEEDED */
+
+#field_8_92,
+#field_8_143,
+#field_8_142,
+#field_8_138,
+#field_8_131,
+#field_8_141,
+#field_8_153,
+#field_8_132,
+#field_8_133,
+#field_8_134,
+#field_8_135,
+#field_8_144,
+#field_8_145,
+#field_8_146,
+#field_8_110,
+#field_8_157,
+#field_8_158 {
+  display: none !important;
+}
+
+#gform_totals_8 {
+  display: none !important;
+}
+
+/* All products take up full container */
+.woocommerce div.product div.summary {
+  width: 100%;
+}
+
+/* Text align the whole container */
+#gform_fields_8 {
+  text-align: center;
+}
+
+#field_8_3 {
+  margin-bottom: 0px !important;
+  padding-bottom: 55px !important;
+}
+
+p.price,
+#gform_totals_8 {
+  display: none;
+}
+
+/* Remove Related Products Menu */
+.related.products {
+  display: none !important;
+}
+
+/* Remove Product Images */
+.woocommerce div.product div.images.woocommerce-product-gallery,
+div.product_meta {
+  display: none !important;
+}
+
+/* Remove product price label */
+span.ginput_product_price_label {
+  display: none !important;
+}
+
+/* Remove input quantity label */
+.ginput_quantity_label {
+  display: none !important;
+  margin-left: auto !important;
+}
+
+/* CIRCULAR FONT */
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot");
+  src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg");
+}
+
+#gform_fields_8 {
+  font-family: "Circular Std Book", "Open Sans";
+  letter-spacing: 0.3px;
+  font-size: 1.1em !important;
+}
+
+/* Error messages */
+#ordering-form
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div.elementor-element.elementor-element-8402693.elementor-widget.elementor-widget-wc-elements
+  > div
+  > div
+  > div
+  > div.woocommerce-notices-wrapper
+  > ul
+  > li
+  > a {
+  color: white !important;
+  background-color: #0a2657 !important;
+}
+
+/* Error messages */
+#ordering-form
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div.elementor-element.elementor-element-8402693.elementor-widget.elementor-widget-wc-elements
+  > div
+  > div
+  > div
+  > div.woocommerce-notices-wrapper
+  > ul
+  > li {
+  color: black !important;
+}
+
+#field_8_3 > label {
+  font-size: 1.1em !important;
+}
+
+#input_8_3,
+#field_8_3 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.minus-quantity,
+#field_8_3 > div.ginput_container.ginput_container_singleproduct > span.quantity-sign.plus-quantity,
+#ginput_quantity_8_3 {
+  z-index: 200 !important;
+  line-height: 25px !important;
+}
+
+/* All products take up full container */
+.woocommerce div.product div.summary {
+  width: 100%;
+}
+
+/* Text align the whole container */
+#gform_fields_7 {
+  text-align: center;
+}
+
+/* Remove Related Products Menu */
+.related.products {
+  display: none !important;
+}
+
+/* Remove Product Images */
+.woocommerce div.product div.images.woocommerce-product-gallery,
+div.product_meta {
+  display: none !important;
+}
+
+/* Remove product price label */
+span.ginput_product_price_label {
+  display: none !important;
+}
+
+/* Remove input quantity label */
+.ginput_quantity_label {
+  display: none !important;
+  margin-left: auto !important;
+}
+
+/* Each product to have border etc */
+.gf_left_half,
+.gf_right_half,
+.gf_left_third,
+.gf_middle_third,
+.gf_right_third {
+  border: 1px solid #d1cfcf;
+  padding: 10px 50px !important;
+  position: relative;
+}
+
+/* Remove padding */
+.gform_wrapper .description,
+.gform_wrapper .gfield_description,
+.gform_wrapper .gsection_description {
+  padding: 0 0 0 0 !important;
+}
+
+/* Labels for each Product */
+label.gfield_label {
+  order: 0;
+  color: #0a2657;
+  font-weight: 700;
+}
+
+/* Pricing container */
+.gfield_price .ginput_container {
+  order: 2 !important;
+  margin-top: 10px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+/* More pricing container per product */
+.ginput_container_singleproduct {
+  bottom: 0 !important;
+  margin-bottom: 10px !important;
+  width: 100% !important;
+  right: 10px !important;
+  padding: 0 10px !important;
+  position: absolute;
+}
+
+/* Product Price */
+.ginput_product_price {
+  font-weight: 600;
+  color: #0a2657 !important;
+  font-size: 14px;
+  vertical-align: middle !important;
+  margin-top: 7px;
+  margin-right: 10px;
+  display: inline-block !important;
+}
+
+.ginput_quantity {
+  text-align: center !important;
+  padding: 5px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #0a2657 !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  display: inline-block !important;
+  max-width: 40px !important;
+}
+
+.quantity-sign {
+  color: #0a2657 !important;
+  margin: 0 !important;
+  font-size: 30px !important;
+  outline: none;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.minus-quantity {
+  margin-right: 5px !important;
+}
+
+.gform_wrapper
+  input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+  padding: 0px;
+}
+
+#gform_submit_button_8 {
+  border: 1px solid #d1cfcf !important;
+  background: transparent !important;
+  color: #515151 !important;
+  text-transform: uppercase !important;
+  float: right !important;
+  padding: 15px 30px !important;
+  transition: all 0.3s ease-in-out !important;
+  border-radius: 0 !important;
+}
+
+@media only screen and (min-width: 300px) {
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    padding: 10px !important;
+    width: 100% !important;
+  }
+
+  #field_8_148,
+  #field_8_149,
+  #field_8_150,
+  #field_8_151,
+  #field_8_152 {
+    height: 170px !important;
+  }
+
+  #field_8_162,
+  #field_8_163,
+  #field_8_164,
+  #field_8_165,
+  #field_8_166,
+  #field_8_170 {
+    height: 160px !important;
+  }
+
+  #field_8_160,
+  #field_8_168,
+  #field_8_169 {
+    height: 160px !important;
+  }
+
+  #field_8_12,
+  #field_8_14,
+  #field_8_21,
+  #field_8_22,
+  #field_8_23,
+  #field_8_69 {
+    height: 200px !important;
+  }
+
+  #field_8_139,
+  #field_8_97,
+  #field_8_140 {
+    height: 165px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    padding: 10px !important;
+    width: 100% !important;
+  }
+
+  #field_8_148,
+  #field_8_149,
+  #field_8_150,
+  #field_8_151,
+  #field_8_152 {
+    width: 49% !important;
+    height: 170px !important;
+  }
+
+  #field_8_162,
+  #field_8_163,
+  #field_8_164,
+  #field_8_165,
+  #field_8_166,
+  #field_8_170 {
+    width: 49% !important;
+    height: 130px !important;
+  }
+
+  #field_8_160,
+  #field_8_168,
+  #field_8_169 {
+    width: 49% !important;
+    height: 160px !important;
+  }
+
+  #field_8_12,
+  #field_8_14,
+  #field_8_21,
+  #field_8_22,
+  #field_8_23,
+  #field_8_69 {
+    width: 49% !important;
+    height: 170px !important;
+  }
+
+  #field_8_139,
+  #field_8_97,
+  #field_8_140 {
+    width: 49% !important;
+    height: 160px !important;
+  }
+
+  .ginput_container_singleproduct {
+    padding: 0px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    width: 80% !important;
+  }
+
+  #field_8_148,
+  #field_8_149,
+  #field_8_150,
+  #field_8_151,
+  #field_8_152 {
+    height: 160px !important;
+    width: 32% !important;
+  }
+
+  #field_8_162,
+  #field_8_163,
+  #field_8_164,
+  #field_8_165,
+  #field_8_166,
+  #field_8_170 {
+    height: 150px !important;
+    width: 32% !important;
+  }
+
+  #field_8_160,
+  #field_8_168,
+  #field_8_169 {
+    width: 32% !important;
+  }
+
+  #field_8_12,
+  #field_8_14,
+  #field_8_21,
+  #field_8_22,
+  #field_8_23,
+  #field_8_69 {
+    width: 32% !important;
+  }
+
+  #field_8_139,
+  #field_8_97,
+  #field_8_140 {
+    width: 32% !important;
+  }
+
+  .gf_left_third,
+  .gf_middle_third {
+    margin-right: 8px !important;
+  }
+}
+
+@media only screen and (min-width: 1078px) {
+  .gf_left_half,
+  .gf_right_half,
+  .gf_left_third,
+  .gf_middle_third,
+  .gf_right_third {
+    width: 60% !important;
+  }
+
+  #field_8_148,
+  #field_8_149,
+  #field_8_150,
+  #field_8_151,
+  #field_8_152 {
+    height: 150px !important;
+  }
+
+  #field_8_162,
+  #field_8_163,
+  #field_8_164,
+  #field_8_165,
+  #field_8_166,
+  #field_8_170 {
+    height: 140px !important;
+  }
+
+  #field_8_160,
+  #field_8_168,
+  #field_8_169 {
+    height: 120px !important;
+  }
+
+  #field_8_139,
+  #field_8_97,
+  #field_8_140 {
+    height: 170px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #field_8_148,
+  #field_8_149,
+  #field_8_150,
+  #field_8_151,
+  #field_8_152 {
+    height: 170px !important;
+  }
+
+  #field_8_162,
+  #field_8_163,
+  #field_8_164,
+  #field_8_165,
+  #field_8_166,
+  #field_8_170 {
+    height: 120px !important;
+  }
+
+  #field_8_160,
+  #field_8_168,
+  #field_8_169 {
+    height: 140px !important;
+  }
+
+  #field_8_12,
+  #field_8_14,
+  #field_8_21,
+  #field_8_22,
+  #field_8_23,
+  #field_8_69 {
+    height: 180px !important;
+  }
+
+  #field_8_139,
+  #field_8_97,
+  #field_8_140 {
+    height: 120px !important;
+  }
+}
+
+#gfield_description_8_108 {
+  color: #0a2657;
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev {
+  display: none !important;
+}
+
+#ui-datepicker-div > div > div > select.ui-datepicker-year > option:not(:nth-child(101)) {
+  display: none !important;
+}
+
+#ui-datepicker-div > div > div > select.ui-datepicker-month > option:nth-child(-n + 11) {
+  display: none !important;
+}
